@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>BHStore</title>
 </head>
@@ -136,23 +136,19 @@
 </style>
 
 <body>
-    <header class="banner">
-        <canvas id="snowCanvas"></canvas>
-        <div class="banner-content">
-            <div class="logo-container">
-                <img src="logotip.jpg" alt="Логотип" class="logo no-interaction">
-                <h1 class="unselectable">BHStore</h1>
-            </div>
-            <nav class="navigation">
-                <img src="menu.png" alt="Навигация" id="nav-toggle" class="nav-toggle" />
-                <ul class="nav-list" id="nav-list">
-                    <li class="nav-item"><a href="index.html" class="disabled">Главная страница</a></li>
-                    <li class="nav-item"><a href="news.html">Новости</a></li>
-                    <li class="nav-item"><a href="staff.html">Персонал</a></li>
-                </ul>
-            </nav>
+    <div class="banner">
+        <div class="logo-container">
+            <img src="logotip.jpg" alt="Логотип" class="logo">
+            <h1>Название</h1>
         </div>
-    </header>
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Главная страница</a></li>
+                <li class="nav-item"><a href="news.html">Новости</a></li>
+                <li class="nav-item"><a href="staff.html">Персонал</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <section id="about" class="about">
         <h2 class="unselectable no-interaction">О нас</h2>
