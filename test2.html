@@ -1,0 +1,1696 @@
+<html lang="en"><head><script src="https://www.paypal.com/sdk/js?client-id=ARPP8PEJ-0DMab3DAGAPTILDBB2dJ6xmcgr_7LDUNAd5sciHzpudhK-ehDhH7ywF64EuBGAL83NTYsJC&amp;currency=USD&amp;vault=true&amp;intent=capture" data-js-sdk-library="react-paypal-js" data-sdk-integration-source="react-paypal-js" data-react-paypal-script-id="react-paypal-js-iiuovjsckceqfjegownrvhoixtbztzlvqmygaiqewumofroevziwaawqljbxaspzeqxjewcwpnnnkyjroclfiwswdxkyciseblauicltugxfqiisgsvbysiyeobhsgsmlromwirzyyfpvvpn" data-uid-auto="uid_fxzhegpljrgirbpnwenjeeauyamqtp"></script><meta charset="utf-8"><style type="text/css">:root, :host {
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+    --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+    --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+    --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+    --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  }
+  
+  svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+  }
+  
+  .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+  }
+  .svg-inline--fa.fa-2xs {
+    vertical-align: 0.1em;
+  }
+  .svg-inline--fa.fa-xs {
+    vertical-align: 0em;
+  }
+  .svg-inline--fa.fa-sm {
+    vertical-align: -0.0714285705em;
+  }
+  .svg-inline--fa.fa-lg {
+    vertical-align: -0.2em;
+  }
+  .svg-inline--fa.fa-xl {
+    vertical-align: -0.25em;
+  }
+  .svg-inline--fa.fa-2xl {
+    vertical-align: -0.3125em;
+  }
+  .svg-inline--fa.fa-pull-left {
+    margin-right: var(--fa-pull-margin, 0.3em);
+    width: auto;
+  }
+  .svg-inline--fa.fa-pull-right {
+    margin-left: var(--fa-pull-margin, 0.3em);
+    width: auto;
+  }
+  .svg-inline--fa.fa-li {
+    width: var(--fa-li-width, 2em);
+    top: 0.25em;
+  }
+  .svg-inline--fa.fa-fw {
+    width: var(--fa-fw-width, 1.25em);
+  }
+  
+  .fa-layers svg.svg-inline--fa {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .fa-layers-counter, .fa-layers-text {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .fa-layers {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    text-align: center;
+    vertical-align: -0.125em;
+    width: 1em;
+  }
+  .fa-layers svg.svg-inline--fa {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  
+  .fa-layers-text {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  
+  .fa-layers-counter {
+    background-color: var(--fa-counter-background-color, #ff253a);
+    border-radius: var(--fa-counter-border-radius, 1em);
+    box-sizing: border-box;
+    color: var(--fa-inverse, #fff);
+    line-height: var(--fa-counter-line-height, 1);
+    max-width: var(--fa-counter-max-width, 5em);
+    min-width: var(--fa-counter-min-width, 1.5em);
+    overflow: hidden;
+    padding: var(--fa-counter-padding, 0.25em 0.5em);
+    right: var(--fa-right, 0);
+    text-overflow: ellipsis;
+    top: var(--fa-top, 0);
+    -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+            transform: scale(var(--fa-counter-scale, 0.25));
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  
+  .fa-layers-bottom-right {
+    bottom: var(--fa-bottom, 0);
+    right: var(--fa-right, 0);
+    top: auto;
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  
+  .fa-layers-bottom-left {
+    bottom: var(--fa-bottom, 0);
+    left: var(--fa-left, 0);
+    right: auto;
+    top: auto;
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  
+  .fa-layers-top-right {
+    top: var(--fa-top, 0);
+    right: var(--fa-right, 0);
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  
+  .fa-layers-top-left {
+    left: var(--fa-left, 0);
+    right: auto;
+    top: var(--fa-top, 0);
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  
+  .fa-1x {
+    font-size: 1em;
+  }
+  
+  .fa-2x {
+    font-size: 2em;
+  }
+  
+  .fa-3x {
+    font-size: 3em;
+  }
+  
+  .fa-4x {
+    font-size: 4em;
+  }
+  
+  .fa-5x {
+    font-size: 5em;
+  }
+  
+  .fa-6x {
+    font-size: 6em;
+  }
+  
+  .fa-7x {
+    font-size: 7em;
+  }
+  
+  .fa-8x {
+    font-size: 8em;
+  }
+  
+  .fa-9x {
+    font-size: 9em;
+  }
+  
+  .fa-10x {
+    font-size: 10em;
+  }
+  
+  .fa-2xs {
+    font-size: 0.625em;
+    line-height: 0.1em;
+    vertical-align: 0.225em;
+  }
+  
+  .fa-xs {
+    font-size: 0.75em;
+    line-height: 0.0833333337em;
+    vertical-align: 0.125em;
+  }
+  
+  .fa-sm {
+    font-size: 0.875em;
+    line-height: 0.0714285718em;
+    vertical-align: 0.0535714295em;
+  }
+  
+  .fa-lg {
+    font-size: 1.25em;
+    line-height: 0.05em;
+    vertical-align: -0.075em;
+  }
+  
+  .fa-xl {
+    font-size: 1.5em;
+    line-height: 0.0416666682em;
+    vertical-align: -0.125em;
+  }
+  
+  .fa-2xl {
+    font-size: 2em;
+    line-height: 0.03125em;
+    vertical-align: -0.1875em;
+  }
+  
+  .fa-fw {
+    text-align: center;
+    width: 1.25em;
+  }
+  
+  .fa-ul {
+    list-style-type: none;
+    margin-left: var(--fa-li-margin, 2.5em);
+    padding-left: 0;
+  }
+  .fa-ul > li {
+    position: relative;
+  }
+  
+  .fa-li {
+    left: calc(var(--fa-li-width, 2em) * -1);
+    position: absolute;
+    text-align: center;
+    width: var(--fa-li-width, 2em);
+    line-height: inherit;
+  }
+  
+  .fa-border {
+    border-color: var(--fa-border-color, #eee);
+    border-radius: var(--fa-border-radius, 0.1em);
+    border-style: var(--fa-border-style, solid);
+    border-width: var(--fa-border-width, 0.08em);
+    padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+  }
+  
+  .fa-pull-left {
+    float: left;
+    margin-right: var(--fa-pull-margin, 0.3em);
+  }
+  
+  .fa-pull-right {
+    float: right;
+    margin-left: var(--fa-pull-margin, 0.3em);
+  }
+  
+  .fa-beat {
+    -webkit-animation-name: fa-beat;
+            animation-name: fa-beat;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  }
+  
+  .fa-bounce {
+    -webkit-animation-name: fa-bounce;
+            animation-name: fa-bounce;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+  }
+  
+  .fa-fade {
+    -webkit-animation-name: fa-fade;
+            animation-name: fa-fade;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  }
+  
+  .fa-beat-fade {
+    -webkit-animation-name: fa-beat-fade;
+            animation-name: fa-beat-fade;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  }
+  
+  .fa-flip {
+    -webkit-animation-name: fa-flip;
+            animation-name: fa-flip;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  }
+  
+  .fa-shake {
+    -webkit-animation-name: fa-shake;
+            animation-name: fa-shake;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+            animation-timing-function: var(--fa-animation-timing, linear);
+  }
+  
+  .fa-spin {
+    -webkit-animation-name: fa-spin;
+            animation-name: fa-spin;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 2s);
+            animation-duration: var(--fa-animation-duration, 2s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+            animation-timing-function: var(--fa-animation-timing, linear);
+  }
+  
+  .fa-spin-reverse {
+    --fa-animation-direction: reverse;
+  }
+  
+  .fa-pulse,
+  .fa-spin-pulse {
+    -webkit-animation-name: fa-spin;
+            animation-name: fa-spin;
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+            animation-timing-function: var(--fa-animation-timing, steps(8));
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+      -webkit-animation-delay: -1ms;
+              animation-delay: -1ms;
+      -webkit-animation-duration: 1ms;
+              animation-duration: 1ms;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-transition-delay: 0s;
+              transition-delay: 0s;
+      -webkit-transition-duration: 0s;
+              transition-duration: 0s;
+    }
+  }
+  @-webkit-keyframes fa-beat {
+    0%, 90% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    45% {
+      -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+              transform: scale(var(--fa-beat-scale, 1.25));
+    }
+  }
+  @keyframes fa-beat {
+    0%, 90% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    45% {
+      -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+              transform: scale(var(--fa-beat-scale, 1.25));
+    }
+  }
+  @-webkit-keyframes fa-bounce {
+    0% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+              transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    }
+    30% {
+      -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+              transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    }
+    50% {
+      -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+              transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    }
+    57% {
+      -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+              transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+    }
+    64% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+  }
+  @keyframes fa-bounce {
+    0% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+              transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    }
+    30% {
+      -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+              transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    }
+    50% {
+      -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+              transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    }
+    57% {
+      -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+              transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+    }
+    64% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+  }
+  @-webkit-keyframes fa-fade {
+    50% {
+      opacity: var(--fa-fade-opacity, 0.4);
+    }
+  }
+  @keyframes fa-fade {
+    50% {
+      opacity: var(--fa-fade-opacity, 0.4);
+    }
+  }
+  @-webkit-keyframes fa-beat-fade {
+    0%, 100% {
+      opacity: var(--fa-beat-fade-opacity, 0.4);
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+              transform: scale(var(--fa-beat-fade-scale, 1.125));
+    }
+  }
+  @keyframes fa-beat-fade {
+    0%, 100% {
+      opacity: var(--fa-beat-fade-opacity, 0.4);
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+              transform: scale(var(--fa-beat-fade-scale, 1.125));
+    }
+  }
+  @-webkit-keyframes fa-flip {
+    50% {
+      -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+              transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    }
+  }
+  @keyframes fa-flip {
+    50% {
+      -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+              transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    }
+  }
+  @-webkit-keyframes fa-shake {
+    0% {
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
+    }
+    4% {
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
+    }
+    8%, 24% {
+      -webkit-transform: rotate(-18deg);
+              transform: rotate(-18deg);
+    }
+    12%, 28% {
+      -webkit-transform: rotate(18deg);
+              transform: rotate(18deg);
+    }
+    16% {
+      -webkit-transform: rotate(-22deg);
+              transform: rotate(-22deg);
+    }
+    20% {
+      -webkit-transform: rotate(22deg);
+              transform: rotate(22deg);
+    }
+    32% {
+      -webkit-transform: rotate(-12deg);
+              transform: rotate(-12deg);
+    }
+    36% {
+      -webkit-transform: rotate(12deg);
+              transform: rotate(12deg);
+    }
+    40%, 100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @keyframes fa-shake {
+    0% {
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
+    }
+    4% {
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
+    }
+    8%, 24% {
+      -webkit-transform: rotate(-18deg);
+              transform: rotate(-18deg);
+    }
+    12%, 28% {
+      -webkit-transform: rotate(18deg);
+              transform: rotate(18deg);
+    }
+    16% {
+      -webkit-transform: rotate(-22deg);
+              transform: rotate(-22deg);
+    }
+    20% {
+      -webkit-transform: rotate(22deg);
+              transform: rotate(22deg);
+    }
+    32% {
+      -webkit-transform: rotate(-12deg);
+              transform: rotate(-12deg);
+    }
+    36% {
+      -webkit-transform: rotate(12deg);
+              transform: rotate(12deg);
+    }
+    40%, 100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  .fa-rotate-90 {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  
+  .fa-rotate-180 {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  
+  .fa-rotate-270 {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  
+  .fa-flip-horizontal {
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+  }
+  
+  .fa-flip-vertical {
+    -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+  }
+  
+  .fa-flip-both,
+  .fa-flip-horizontal.fa-flip-vertical {
+    -webkit-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+  }
+  
+  .fa-rotate-by {
+    -webkit-transform: rotate(var(--fa-rotate-angle, 0));
+            transform: rotate(var(--fa-rotate-angle, 0));
+  }
+  
+  .fa-stack {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2em;
+    position: relative;
+    width: 2.5em;
+  }
+  
+  .fa-stack-1x,
+  .fa-stack-2x {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: var(--fa-stack-z-index, auto);
+  }
+  
+  .svg-inline--fa.fa-stack-1x {
+    height: 1em;
+    width: 1.25em;
+  }
+  .svg-inline--fa.fa-stack-2x {
+    height: 2em;
+    width: 2.5em;
+  }
+  
+  .fa-inverse {
+    color: var(--fa-inverse, #fff);
+  }
+  
+  .sr-only,
+  .fa-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .sr-only-focusable:not(:focus),
+  .fa-sr-only-focusable:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .svg-inline--fa .fa-primary {
+    fill: var(--fa-primary-color, currentColor);
+    opacity: var(--fa-primary-opacity, 1);
+  }
+  
+  .svg-inline--fa .fa-secondary {
+    fill: var(--fa-secondary-color, currentColor);
+    opacity: var(--fa-secondary-opacity, 0.4);
+  }
+  
+  .svg-inline--fa.fa-swap-opacity .fa-primary {
+    opacity: var(--fa-secondary-opacity, 0.4);
+  }
+  
+  .svg-inline--fa.fa-swap-opacity .fa-secondary {
+    opacity: var(--fa-primary-opacity, 1);
+  }
+  
+  .svg-inline--fa mask .fa-primary,
+  .svg-inline--fa mask .fa-secondary {
+    fill: black;
+  }
+  
+  .fad.fa-inverse,
+  .fa-duotone.fa-inverse {
+    color: var(--fa-inverse, #fff);
+  }</style><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="pella offers simple and reliable Discord Bot and Minecraft server hosting in EU and US." data-react-helmet="true"><meta name="twitter:description" content="pella offers simple and reliable Discord Bot and Minecraft server hosting in EU and US." data-react-helmet="true"><meta property="og:description" content="pella offers simple and reliable Discord Bot and Minecraft server hosting in EU and US." data-react-helmet="true"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@thestonechat"><meta name="twitter:title" content="pella - free discord bot hosting"><meta name="twitter:creator" content="@thestonechat"><meta name="twitter:image" content="https://pella.app/twitter_image.png"><title data-react-helmet="true">pella - free discord bot hosting</title><meta name="twitter:title" content="pella - free discord bot hosting" data-react-helmet="true"><meta property="og:title" content="pella - free discord bot hosting" data-react-helmet="true"><meta property="og:image" content="/twitter_image.png"><meta property="og:url" content="pella.app"><meta property="og:site_name" content="pella - free discord bot hosting"><meta property="og:locale" content="en_US"><link rel="apple-touch-icon" href="/logo.svg"><link rel="manifest" href="/manifest.json"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11070587829&amp;l=dataLayer&amp;cx=c&amp;gtm=45je52d0v9189678348za200"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-534NEWS5B2"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11070587829"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-534NEWS5B2"),gtag("config","AW-11070587829")</script><link rel="preload" as="image" href="/minecraft-server-on-macbook.png"><link rel="preload" as="image" href="/logo.svg"><link rel="preload" as="image" href="/icons/minecraft.svg"><link rel="preload" as="image" href="/icons/discord.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"><script defer="defer" src="/static/js/main.daa02c75.js"></script><link href="/static/css/main.05765dcd.css" rel="stylesheet"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11070587829/?random=1739973593504&amp;cv=11&amp;fst=1739973593504&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be52d0v9185290367za200zb9189678348&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=102067808~102482432~102539968~102558064~102587591~102605417~102640600&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.pella.app%2Fhome&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=pella%20-%20free%20discord%20bot%20hosting&amp;npa=0&amp;pscdl=noapi&amp;auid=1446703597.1739973594&amp;uaa=x86&amp;uab=64&amp;uafvl=Not(A%253ABrand%3B99.0.0.0%7CMicrosoft%2520Edge%3B133.0.3065.69%7CChromium%3B133.0.6943.99&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><style type="text/css">#style_toast_container__DT-ei * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .style_toast-message__-UN8x {
+    opacity: 0;
+    position: fixed;
+    z-index: 1000;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 90%;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  }
+  .style_top-center__zZFy4,
+  .style_bottom-center__NH15O,
+  .style_center__GLmmM {
+    left: 50%;
+  }
+  .style_toast-message__-UN8x.toast-enter-active,
+  .style_toast-message__-UN8x.toast-appear-active {
+    opacity: 1;
+  }
+  .style_toast-message__-UN8x.toast-exit-active {
+    opacity: 0;
+  }
+  .style_toast-content__jaj36 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .style_toast-theme-content__JPkou {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .style_clickable__F3Zx7 {
+    cursor: pointer;
+  }
+  .style_loading__tn5sw .style_spinner-wrap__kOodK {
+    visibility: visible;
+    opacity: 1;
+    width: 1.1em;
+    margin-right: 12px;
+  }
+  .style_spinner-wrap__kOodK {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    margin-right: 0;
+  }
+  .style_spinner__mu5OS {
+    display: block;
+    overflow: hidden;
+    width: 1.1em;
+    height: 1.1em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    vertical-align: middle;
+    text-indent: -99999px;
+    -webkit-animation: style_spin__Ez3u3 1s ease-in-out infinite;
+            animation: style_spin__Ez3u3 1s ease-in-out infinite;
+  }
+  @-webkit-keyframes style_spin__Ez3u3 {
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes style_spin__Ez3u3 {
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  </style><style data-emotion="css" data-s=""></style></head><body><noscript>You need to enable JavaScript to run this app.</noscript><iframe allow="join-ad-interest-group" data-tagging-id="AW-11070587829" data-load-time="1739973593520" height="0" width="0" src="https://td.doubleclick.net/td/rul/11070587829?random=1739973593504&amp;cv=11&amp;fst=1739973593504&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be52d0v9185290367za200zb9189678348&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=102067808~102482432~102539968~102558064~102587591~102605417~102640600&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.pella.app%2Fhome&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=pella%20-%20free%20discord%20bot%20hosting&amp;npa=0&amp;pscdl=noapi&amp;auid=1446703597.1739973594&amp;uaa=x86&amp;uab=64&amp;uafvl=Not(A%253ABrand%3B99.0.0.0%7CMicrosoft%2520Edge%3B133.0.3065.69%7CChromium%3B133.0.6943.99&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><div id="root"><main class="flex max-w-full flex-col gap-0 overflow-x-hidden"><div class="h-32"></div><nav class="fixed left-0 right-0 top-4 z-nav m-auto flex h-20 w-[800px] max-w-[95vw] items-center justify-between rounded-3xl bg-brand-dark-gray bg-opacity-50 px-8 ring-[1px] ring-brand-dark-gray backdrop-blur-lg"><a class="flex items-center gap-2" href="/"><img src="/logo.svg" alt="pella logo" width="50" height="50"><span class="text-2xl">pella</span></a><div class="absolute left-0 right-0 m-auto hidden w-fit gap-8 md:flex"><a href="/#pricing" class="duration-200 hover:opacity-50">Pricing</a><a href="https://status.pella.app/" target="__blank" class="duration-200 hover:opacity-50">Status</a><a href="/blog" class="duration-200 hover:opacity-50">Blog</a><a href="https://discord.gg/QWVhbD9THW" target="__blank" class="duration-200 hover:opacity-50">Discord</a></div><div class="hidden gap-4 md:flex"><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-transparent hover:opacity-50 font-bold" href="/login" target="_self">LOGIN</a><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-bold" href="/signup" target="_self">SIGN UP</a></div><div class="flex cursor-pointer flex-col gap-1 sm:flex md:hidden"><div class="h-1 w-8 rounded-md bg-brand-light-gray"></div><div class="h-1 w-8 rounded-md bg-brand-light-gray"></div><div class="h-1 w-8 rounded-md bg-brand-light-gray"></div></div></nav><div class="relative z-[-1] max-w-full"><div class="absolute z-[-1] h-40 w-40 rounded-full bg-brand-purple blur-[128px] transition-all duration-[10s] sm:h-64 sm:w-64 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px]" style="left: 660.588px; top: -56.0437px;"></div><div class="absolute z-[-1] h-40 w-40 rounded-full blur-[128px] transition-all duration-[10s] sm:h-64 sm:w-64 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px] bg-brand-light" style="left: 181.614px; top: -93.6376px;"></div><div class="absolute z-[-1] h-40 w-40 rounded-full blur-[128px] transition-all duration-[10s] sm:h-64 sm:w-64 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px] bg-brand-light" style="left: 506.769px; top: -59.9094px;"></div></div><div class="relative flex w-full flex-col items-center justify-center gap-4 px-16 pb-40 pt-16 lg:flex-row"><div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left"><div><h1 class="text-5xl font-bold">Simple, Reliable &amp; Affordable.</h1><h2 class="text-gray-400">Join pella and experience the redefined cloud.</h2></div><div class="flex gap-4"><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 w-fit" href="/signup" target="_self">Get Started <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" class="svg-inline--fa fa-arrow-right-long ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg></a><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand-light-gray hover:bg-opacity-75 w-20 sm:w-32" href="/#pricing" target="_self">Pricing</a></div><div class="flex flex-col items-center gap-2 sm:flex-row"><a href="https://www.trustpilot.com/review/pella.app" target="_blank" rel="noreferrer" class="flex w-fit shrink-0 cursor-pointer flex-col gap-1 rounded-md border-[1px] border-brand-green border-opacity-20 bg-brand-green bg-opacity-10 p-2 px-4 backdrop-blur-xl"><div class="flex items-center justify-between gap-2"><div class="text-sm font-bold">Trustpilot</div><div class="text-xs font-bold opacity-50">Rated 4.7/5</div></div><div class="flex gap-2"><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 0c-12.2 .1-23.3 7-28.6 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3L288 439.8V0zM429.9 512c1.1 .1 2.1 .1 3.2 0h-3.2z"></path></svg></div></div></a><div class="flex max-h-full max-w-full flex-col overflow-auto rounded-md w-full bg-transparent"><div class="flex h-full max-h-full flex-col overflow-auto rounded-md bg-brand-secondary p-4 w-full gap-1 border-[1px] border-white border-opacity-10 bg-opacity-50 py-2 backdrop-blur-xl"><div class="flex items-center justify-between gap-2"><div class="text-sm font-bold">Live Stats</div></div><div class="flex gap-4"><div class="flex items-center gap-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user h-4 w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>31335</div><div class="flex items-center gap-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="server" class="svg-inline--fa fa-server h-4 w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"></path></svg>23398</div></div></div></div></div></div><div class="css-1bwerz7" style="animation-delay: 0ms;"><div class="hidden w-full -skew-x-3 -skew-y-3 shadow-2xl md:flex lg:max-w-[500px] lg:-skew-x-6 lg:-skew-y-3 xl:max-w-[600px]"><div class="flex max-h-[400px] min-h-[400px] min-w-[750px] rounded-lg border-[1px] border-brand-light-gray bg-black p-4 shadow-2xl"><div class="flex w-full flex-col gap-4 md:flex-row"><div class="flex flex-col justify-between"><div class="flex gap-2 overflow-auto md:flex-col"><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table-list" class="svg-inline--fa fa-table-list opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 0v64h64V96H64zm384 0H192v64H448V96zM64 224v64h64V224H64zm384 0H192v64H448V224zM64 352v64h64V352H64zm384 0H192v64H448V352z"></path></svg></div> Overview</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="screwdriver-wrench" class="svg-inline--fa fa-screwdriver-wrench opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"></path></svg></div> Manage</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="box-archive" class="svg-inline--fa fa-box-archive opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z"></path></svg></div> Files</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="puzzle-piece" class="svg-inline--fa fa-puzzle-piece opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M192 104.8c0-9.2-5.8-17.3-13.2-22.8C167.2 73.3 160 61.3 160 48c0-26.5 28.7-48 64-48s64 21.5 64 48c0 13.3-7.2 25.3-18.8 34c-7.4 5.5-13.2 13.6-13.2 22.8c0 12.8 10.4 23.2 23.2 23.2H336c26.5 0 48 21.5 48 48v56.8c0 12.8 10.4 23.2 23.2 23.2c9.2 0 17.3-5.8 22.8-13.2c8.7-11.6 20.7-18.8 34-18.8c26.5 0 48 28.7 48 64s-21.5 64-48 64c-13.3 0-25.3-7.2-34-18.8c-5.5-7.4-13.6-13.2-22.8-13.2c-12.8 0-23.2 10.4-23.2 23.2V464c0 26.5-21.5 48-48 48H279.2c-12.8 0-23.2-10.4-23.2-23.2c0-9.2 5.8-17.3 13.2-22.8c11.6-8.7 18.8-20.7 18.8-34c0-26.5-28.7-48-64-48s-64 21.5-64 48c0 13.3 7.2 25.3 18.8 34c7.4 5.5 13.2 13.6 13.2 22.8c0 12.8-10.4 23.2-23.2 23.2H48c-26.5 0-48-21.5-48-48V343.2C0 330.4 10.4 320 23.2 320c9.2 0 17.3 5.8 22.8 13.2C54.7 344.8 66.7 352 80 352c26.5 0 48-28.7 48-64s-21.5-64-48-64c-13.3 0-25.3 7.2-34 18.8C40.5 250.2 32.4 256 23.2 256C10.4 256 0 245.6 0 232.8V176c0-26.5 21.5-48 48-48H168.8c12.8 0 23.2-10.4 23.2-23.2z"></path></svg></div> Addons</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="database" class="svg-inline--fa fa-database opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"></path></svg></div> Backups</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gear" class="svg-inline--fa fa-gear opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"></path></svg></div> Settings</button></div></div><div class="flex h-full max-h-full w-full max-w-full flex-col gap-2 overflow-auto"><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary bg-gradient-to-br from-brand-gray to-brand-secondary p-[1px] overflow-auto h-full"><div class="flex w-full items-center justify-between rounded-md rounded-b-none bg-brand-secondary pl-4 pr-4 pt-4 text-xs font-bold text-white text-opacity-30"><span>FILE MANAGER </span><div class="flex items-center justify-center gap-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder-plus" class="svg-inline--fa fa-folder-plus size-4 cursor-pointer text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H192c20.1 0 39.1 9.5 51.2 25.6l19.2 25.6c6 8.1 15.5 12.8 25.6 12.8H448c35.3 0 64 28.7 64 64V416zM232 376c0 13.3 10.7 24 24 24s24-10.7 24-24V312h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H280V200c0-13.3-10.7-24-24-24s-24 10.7-24 24v64H168c-13.3 0-24 10.7-24 24s10.7 24 24 24h64v64z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-circle-plus" class="svg-inline--fa fa-file-circle-plus size-4 cursor-pointer text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384v38.6C310.1 219.5 256 287.4 256 368c0 59.1 29.1 111.3 73.7 143.3c-3.2 .5-6.4 .7-9.7 .7H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zm48 96a144 144 0 1 1 0 288 144 144 0 1 1 0-288zm16 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v48H368c-8.8 0-16 7.2-16 16s7.2 16 16 16h48v48c0 8.8 7.2 16 16 16s16-7.2 16-16V384h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H448V304z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="upload" class="svg-inline--fa fa-upload size-4 cursor-pointer text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg></div></div><div class="flex w-full flex-col gap-2 overflow-auto rounded-md bg-brand-secondary p-4 rounded-t-none pt-2 h-full max-h-full overflow-y-auto"><div class="flex max-h-full flex-col gap-1 overflow-y-auto"><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder" class="svg-inline--fa fa-folder " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">..</div></div><div class="flex min-w-fit items-center gap-2"></div></div><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder" class="svg-inline--fa fa-folder " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">modules</div></div><div class="flex min-w-fit items-center gap-2"><div><button class="flex items-center justify-center gap-2 outline-none p-0 h-6 w-6" id="headlessui-menu-button-:r4:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path fill="currentColor" d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"></path></svg></button></div></div></div><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" class="svg-inline--fa fa-file " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">main.py</div></div><div class="flex min-w-fit items-center gap-2"><span class="opacity-50">4 KB</span><div><button class="flex items-center justify-center gap-2 outline-none p-0 h-6 w-6" id="headlessui-menu-button-:r7:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path fill="currentColor" d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"></path></svg></button></div></div></div><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" class="svg-inline--fa fa-file " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">requirements.txt</div></div><div class="flex min-w-fit items-center gap-2"><span class="opacity-50">300 B</span><div><button class="flex items-center justify-center gap-2 outline-none p-0 h-6 w-6" id="headlessui-menu-button-:ra:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path fill="currentColor" d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"></path></svg></button></div></div></div></div></div></div></div></div></div></div></div></div><div class="flex w-full justify-center md:mt-12"><section class="flex w-full max-w-[1250px] flex-col gap-32"><div class="flex h-fit flex-col items-center justify-center gap-8 px-4 text-center"><div class="flex flex-col items-center"><h1 class="text-4xl font-bold">Offers</h1><p class="opacity-50">Hosting so simple, we can't put it in words</p></div><div class="css-1c2fuzs" style="animation-delay: 0ms;"><div class="grid max-w-[1500px] grid-cols-1 gap-4 text-start md:grid-cols-2 lg:grid-cols-3"><a href="/free-express-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/javascript.png" alt="JavaScript Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/javascript.png" alt="JavaScript Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">EXPRESS.JS</h2></div><p class="text-left text-sm opacity-80">Host your Express.js apps effortlessly with our free and premium plans. Enjoy 99.9% uptime, seamless GitHub integration, and easy code uploads. Build powerful web applications with confidence! </p></a><a href="/free-fastapi-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/fastapi.svg" alt="FastAPI Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/fastapi.svg" alt="FastAPI Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">FASTAPI</h2></div><p class="text-left text-sm opacity-80">Launch your FastAPI projects with our reliable hosting platform. Whether you're building APIs or microservices, our service ensures 99.9% uptime and supports GitHub imports or direct uploads! </p></a><a href="/flask-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/flask.svg" alt="Flask Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50 invert"><div class="z-10 flex items-center gap-2"><img src="/icons/flask.svg" alt="Flask Logo" class="h-8 invert"><h2 class="text-xl font-bold sm:text-2xl">FLASK</h2></div><p class="text-left text-sm opacity-80">Develop and deploy Flask apps effortlessly with our hosting solutions. From GitHub imports to direct uploads, our platform guarantees 99.9% uptime for your Python-based projects. </p></a><a href="/free-django-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/django.svg" alt="Django Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/django.svg" alt="Django Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">DJANGO</h2></div><p class="text-left text-sm opacity-80">Bring your Django web projects to life with our secure hosting plans. Benefit from 99.9% uptime, GitHub integration, and direct upload options for a smooth development experience. </p></a><a href="/discord-bot-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/discord.svg" alt="Discord Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/discord.svg" alt="Discord Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">DISCORD BOT</h2></div><p class="text-left text-sm opacity-80">We offer free and premium Discord Bot hosting with 99.9% uptime! Import your code from GitHub or upload it directly, pella has you covered! </p></a><a href="/telegram-bot-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/telegram.svg" alt="Telegram Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/telegram.svg" alt="Telegram Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">TELEGRAM BOT</h2></div><p class="text-left text-sm opacity-80">Host your Telegram Bots for free or just $1.25/month. You can also use GitHub for your projects, as well as File Upload. </p></a></div></div></div><div class="flex h-full max-w-full flex-col items-center justify-center gap-8 px-4 text-center" id="pricing"><div class="flex flex-col items-center"><h1 class="text-4xl font-bold">Pricing</h1><p class="opacity-50">Do you like overpaying for compute? No? Welcome to pella</p></div><div class="flex h-fit w-full gap-2 overflow-x-auto pt-4 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3 xl:grid-cols-4"><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Free</div><div class="opacity-75">Best for hobby projects with low power requirements</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.1 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>100 MB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>5 GB Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$0/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Nano</div><div class="opacity-75">Includes all premium features for an unparalleled price</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.1 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>256 MB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$3/year</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Mini</div><div class="opacity-75">Best when you require more performance at low prices</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.25 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>512 MB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$1.80/quarter</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-brand"><div class="absolute -right-6 -top-4 z-dropdown rounded-full bg-brand px-6 py-2">Most Popular</div><div class="text-xl font-bold">Small</div><div class="opacity-75">Best for medium sized apps with a moderate traffic or need for more speed</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.5 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>1 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$1.25/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Medium</div><div class="opacity-75">Best for apps with high traffic or high performance requirements</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>1 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>2 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$2.49/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Large</div><div class="opacity-75">Great for most apps requiring great performance</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>2 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>4 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$4.99/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Larger</div><div class="opacity-75">Incredible speeds and unparalleled performance</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>3 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>8 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$9.99/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Super</div><div class="opacity-75">Twice the power of Large, for when you want to run a beast</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>4 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>16 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$19.99/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div></div></div></section></div><footer class="mt-20 w-screen py-4 text-center text-sm"><span>© 2025 pella</span></footer></main><div class="Toastify"></div></div><div id="clerk-components"></div><div class="fixed left-0 top-0 z-[100] flex h-screen w-screen flex-col items-center gap-8 bg-brand-dark-gray bg-opacity-50 p-4 backdrop-blur-xl translate-y-[-100%]"><div class="flex w-full justify-end p-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark h-8 w-8 p-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></div><div class="flex flex-col items-center justify-center gap-4"><a href="/#pricing" target="__blank" class="duration-200 hover:opacity-50">Pricing</a><a href="https://status.pella.app/" target="__blank" class="duration-200 hover:opacity-50">Status</a><a href="/blog" class="duration-200 hover:opacity-50">Blog</a><a href="https://discord.gg/QWVhbD9THW" target="__blank" class="duration-200 hover:opacity-50">Discord</a></div><div class="flex w-full flex-col items-center gap-2"><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-transparent hover:opacity-50 w-full font-bold" href="/login" target="_self">LOGIN</a><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 w-full font-bold" href="/signup" target="_self">SIGN UP</a></div></div>
+  
+<script src="https://www.paypal.com/sdk/js?client-id=ARPP8PEJ-0DMab3DAGAPTILDBB2dJ6xmcgr_7LDUNAd5sciHzpudhK-ehDhH7ywF64EuBGAL83NTYsJC&amp;currency=USD&amp;vault=true&amp;intent=capture" data-js-sdk-library="react-paypal-js" data-sdk-integration-source="react-paypal-js" data-react-paypal-script-id="react-paypal-js-iiuovjsckceqfjegownrvhoixtbztzlvqmygaiqewumofroevziwaawqljbxaspzeqxjewcwpnnnkyjroclfiwswdxkyciseblauicltugxfqiisgsvbysiyeobhsgsmlromwirzyyfpvvpn" data-uid-auto="uid_fxzhegpljrgirbpnwenjeeauyamqtp"></script><meta charset="utf-8"><style type="text/css">:root, :host {
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+    --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+    --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+    --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+    --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  }
+  
+  svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+  }
+  
+  .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+  }
+  .svg-inline--fa.fa-2xs {
+    vertical-align: 0.1em;
+  }
+  .svg-inline--fa.fa-xs {
+    vertical-align: 0em;
+  }
+  .svg-inline--fa.fa-sm {
+    vertical-align: -0.0714285705em;
+  }
+  .svg-inline--fa.fa-lg {
+    vertical-align: -0.2em;
+  }
+  .svg-inline--fa.fa-xl {
+    vertical-align: -0.25em;
+  }
+  .svg-inline--fa.fa-2xl {
+    vertical-align: -0.3125em;
+  }
+  .svg-inline--fa.fa-pull-left {
+    margin-right: var(--fa-pull-margin, 0.3em);
+    width: auto;
+  }
+  .svg-inline--fa.fa-pull-right {
+    margin-left: var(--fa-pull-margin, 0.3em);
+    width: auto;
+  }
+  .svg-inline--fa.fa-li {
+    width: var(--fa-li-width, 2em);
+    top: 0.25em;
+  }
+  .svg-inline--fa.fa-fw {
+    width: var(--fa-fw-width, 1.25em);
+  }
+  
+  .fa-layers svg.svg-inline--fa {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .fa-layers-counter, .fa-layers-text {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .fa-layers {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    text-align: center;
+    vertical-align: -0.125em;
+    width: 1em;
+  }
+  .fa-layers svg.svg-inline--fa {
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  
+  .fa-layers-text {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  
+  .fa-layers-counter {
+    background-color: var(--fa-counter-background-color, #ff253a);
+    border-radius: var(--fa-counter-border-radius, 1em);
+    box-sizing: border-box;
+    color: var(--fa-inverse, #fff);
+    line-height: var(--fa-counter-line-height, 1);
+    max-width: var(--fa-counter-max-width, 5em);
+    min-width: var(--fa-counter-min-width, 1.5em);
+    overflow: hidden;
+    padding: var(--fa-counter-padding, 0.25em 0.5em);
+    right: var(--fa-right, 0);
+    text-overflow: ellipsis;
+    top: var(--fa-top, 0);
+    -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+            transform: scale(var(--fa-counter-scale, 0.25));
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  
+  .fa-layers-bottom-right {
+    bottom: var(--fa-bottom, 0);
+    right: var(--fa-right, 0);
+    top: auto;
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+  }
+  
+  .fa-layers-bottom-left {
+    bottom: var(--fa-bottom, 0);
+    left: var(--fa-left, 0);
+    right: auto;
+    top: auto;
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  
+  .fa-layers-top-right {
+    top: var(--fa-top, 0);
+    right: var(--fa-right, 0);
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+  
+  .fa-layers-top-left {
+    left: var(--fa-left, 0);
+    right: auto;
+    top: var(--fa-top, 0);
+    -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+            transform: scale(var(--fa-layers-scale, 0.25));
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+  
+  .fa-1x {
+    font-size: 1em;
+  }
+  
+  .fa-2x {
+    font-size: 2em;
+  }
+  
+  .fa-3x {
+    font-size: 3em;
+  }
+  
+  .fa-4x {
+    font-size: 4em;
+  }
+  
+  .fa-5x {
+    font-size: 5em;
+  }
+  
+  .fa-6x {
+    font-size: 6em;
+  }
+  
+  .fa-7x {
+    font-size: 7em;
+  }
+  
+  .fa-8x {
+    font-size: 8em;
+  }
+  
+  .fa-9x {
+    font-size: 9em;
+  }
+  
+  .fa-10x {
+    font-size: 10em;
+  }
+  
+  .fa-2xs {
+    font-size: 0.625em;
+    line-height: 0.1em;
+    vertical-align: 0.225em;
+  }
+  
+  .fa-xs {
+    font-size: 0.75em;
+    line-height: 0.0833333337em;
+    vertical-align: 0.125em;
+  }
+  
+  .fa-sm {
+    font-size: 0.875em;
+    line-height: 0.0714285718em;
+    vertical-align: 0.0535714295em;
+  }
+  
+  .fa-lg {
+    font-size: 1.25em;
+    line-height: 0.05em;
+    vertical-align: -0.075em;
+  }
+  
+  .fa-xl {
+    font-size: 1.5em;
+    line-height: 0.0416666682em;
+    vertical-align: -0.125em;
+  }
+  
+  .fa-2xl {
+    font-size: 2em;
+    line-height: 0.03125em;
+    vertical-align: -0.1875em;
+  }
+  
+  .fa-fw {
+    text-align: center;
+    width: 1.25em;
+  }
+  
+  .fa-ul {
+    list-style-type: none;
+    margin-left: var(--fa-li-margin, 2.5em);
+    padding-left: 0;
+  }
+  .fa-ul > li {
+    position: relative;
+  }
+  
+  .fa-li {
+    left: calc(var(--fa-li-width, 2em) * -1);
+    position: absolute;
+    text-align: center;
+    width: var(--fa-li-width, 2em);
+    line-height: inherit;
+  }
+  
+  .fa-border {
+    border-color: var(--fa-border-color, #eee);
+    border-radius: var(--fa-border-radius, 0.1em);
+    border-style: var(--fa-border-style, solid);
+    border-width: var(--fa-border-width, 0.08em);
+    padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+  }
+  
+  .fa-pull-left {
+    float: left;
+    margin-right: var(--fa-pull-margin, 0.3em);
+  }
+  
+  .fa-pull-right {
+    float: right;
+    margin-left: var(--fa-pull-margin, 0.3em);
+  }
+  
+  .fa-beat {
+    -webkit-animation-name: fa-beat;
+            animation-name: fa-beat;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  }
+  
+  .fa-bounce {
+    -webkit-animation-name: fa-bounce;
+            animation-name: fa-bounce;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+  }
+  
+  .fa-fade {
+    -webkit-animation-name: fa-fade;
+            animation-name: fa-fade;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  }
+  
+  .fa-beat-fade {
+    -webkit-animation-name: fa-beat-fade;
+            animation-name: fa-beat-fade;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+  }
+  
+  .fa-flip {
+    -webkit-animation-name: fa-flip;
+            animation-name: fa-flip;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  }
+  
+  .fa-shake {
+    -webkit-animation-name: fa-shake;
+            animation-name: fa-shake;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+            animation-timing-function: var(--fa-animation-timing, linear);
+  }
+  
+  .fa-spin {
+    -webkit-animation-name: fa-spin;
+            animation-name: fa-spin;
+    -webkit-animation-delay: var(--fa-animation-delay, 0s);
+            animation-delay: var(--fa-animation-delay, 0s);
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 2s);
+            animation-duration: var(--fa-animation-duration, 2s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+            animation-timing-function: var(--fa-animation-timing, linear);
+  }
+  
+  .fa-spin-reverse {
+    --fa-animation-direction: reverse;
+  }
+  
+  .fa-pulse,
+  .fa-spin-pulse {
+    -webkit-animation-name: fa-spin;
+            animation-name: fa-spin;
+    -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+    -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+            animation-timing-function: var(--fa-animation-timing, steps(8));
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+      -webkit-animation-delay: -1ms;
+              animation-delay: -1ms;
+      -webkit-animation-duration: 1ms;
+              animation-duration: 1ms;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-transition-delay: 0s;
+              transition-delay: 0s;
+      -webkit-transition-duration: 0s;
+              transition-duration: 0s;
+    }
+  }
+  @-webkit-keyframes fa-beat {
+    0%, 90% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    45% {
+      -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+              transform: scale(var(--fa-beat-scale, 1.25));
+    }
+  }
+  @keyframes fa-beat {
+    0%, 90% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    45% {
+      -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+              transform: scale(var(--fa-beat-scale, 1.25));
+    }
+  }
+  @-webkit-keyframes fa-bounce {
+    0% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+              transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    }
+    30% {
+      -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+              transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    }
+    50% {
+      -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+              transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    }
+    57% {
+      -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+              transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+    }
+    64% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+  }
+  @keyframes fa-bounce {
+    0% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+              transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+    }
+    30% {
+      -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+              transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+    }
+    50% {
+      -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+              transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+    }
+    57% {
+      -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+              transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+    }
+    64% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      -webkit-transform: scale(1, 1) translateY(0);
+              transform: scale(1, 1) translateY(0);
+    }
+  }
+  @-webkit-keyframes fa-fade {
+    50% {
+      opacity: var(--fa-fade-opacity, 0.4);
+    }
+  }
+  @keyframes fa-fade {
+    50% {
+      opacity: var(--fa-fade-opacity, 0.4);
+    }
+  }
+  @-webkit-keyframes fa-beat-fade {
+    0%, 100% {
+      opacity: var(--fa-beat-fade-opacity, 0.4);
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+              transform: scale(var(--fa-beat-fade-scale, 1.125));
+    }
+  }
+  @keyframes fa-beat-fade {
+    0%, 100% {
+      opacity: var(--fa-beat-fade-opacity, 0.4);
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+              transform: scale(var(--fa-beat-fade-scale, 1.125));
+    }
+  }
+  @-webkit-keyframes fa-flip {
+    50% {
+      -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+              transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    }
+  }
+  @keyframes fa-flip {
+    50% {
+      -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+              transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+    }
+  }
+  @-webkit-keyframes fa-shake {
+    0% {
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
+    }
+    4% {
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
+    }
+    8%, 24% {
+      -webkit-transform: rotate(-18deg);
+              transform: rotate(-18deg);
+    }
+    12%, 28% {
+      -webkit-transform: rotate(18deg);
+              transform: rotate(18deg);
+    }
+    16% {
+      -webkit-transform: rotate(-22deg);
+              transform: rotate(-22deg);
+    }
+    20% {
+      -webkit-transform: rotate(22deg);
+              transform: rotate(22deg);
+    }
+    32% {
+      -webkit-transform: rotate(-12deg);
+              transform: rotate(-12deg);
+    }
+    36% {
+      -webkit-transform: rotate(12deg);
+              transform: rotate(12deg);
+    }
+    40%, 100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @keyframes fa-shake {
+    0% {
+      -webkit-transform: rotate(-15deg);
+              transform: rotate(-15deg);
+    }
+    4% {
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
+    }
+    8%, 24% {
+      -webkit-transform: rotate(-18deg);
+              transform: rotate(-18deg);
+    }
+    12%, 28% {
+      -webkit-transform: rotate(18deg);
+              transform: rotate(18deg);
+    }
+    16% {
+      -webkit-transform: rotate(-22deg);
+              transform: rotate(-22deg);
+    }
+    20% {
+      -webkit-transform: rotate(22deg);
+              transform: rotate(22deg);
+    }
+    32% {
+      -webkit-transform: rotate(-12deg);
+              transform: rotate(-12deg);
+    }
+    36% {
+      -webkit-transform: rotate(12deg);
+              transform: rotate(12deg);
+    }
+    40%, 100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes fa-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  .fa-rotate-90 {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  
+  .fa-rotate-180 {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  
+  .fa-rotate-270 {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  
+  .fa-flip-horizontal {
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+  }
+  
+  .fa-flip-vertical {
+    -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+  }
+  
+  .fa-flip-both,
+  .fa-flip-horizontal.fa-flip-vertical {
+    -webkit-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+  }
+  
+  .fa-rotate-by {
+    -webkit-transform: rotate(var(--fa-rotate-angle, 0));
+            transform: rotate(var(--fa-rotate-angle, 0));
+  }
+  
+  .fa-stack {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2em;
+    position: relative;
+    width: 2.5em;
+  }
+  
+  .fa-stack-1x,
+  .fa-stack-2x {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: var(--fa-stack-z-index, auto);
+  }
+  
+  .svg-inline--fa.fa-stack-1x {
+    height: 1em;
+    width: 1.25em;
+  }
+  .svg-inline--fa.fa-stack-2x {
+    height: 2em;
+    width: 2.5em;
+  }
+  
+  .fa-inverse {
+    color: var(--fa-inverse, #fff);
+  }
+  
+  .sr-only,
+  .fa-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .sr-only-focusable:not(:focus),
+  .fa-sr-only-focusable:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .svg-inline--fa .fa-primary {
+    fill: var(--fa-primary-color, currentColor);
+    opacity: var(--fa-primary-opacity, 1);
+  }
+  
+  .svg-inline--fa .fa-secondary {
+    fill: var(--fa-secondary-color, currentColor);
+    opacity: var(--fa-secondary-opacity, 0.4);
+  }
+  
+  .svg-inline--fa.fa-swap-opacity .fa-primary {
+    opacity: var(--fa-secondary-opacity, 0.4);
+  }
+  
+  .svg-inline--fa.fa-swap-opacity .fa-secondary {
+    opacity: var(--fa-primary-opacity, 1);
+  }
+  
+  .svg-inline--fa mask .fa-primary,
+  .svg-inline--fa mask .fa-secondary {
+    fill: black;
+  }
+  
+  .fad.fa-inverse,
+  .fa-duotone.fa-inverse {
+    color: var(--fa-inverse, #fff);
+  }</style><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="pella offers simple and reliable Discord Bot and Minecraft server hosting in EU and US." data-react-helmet="true"><meta name="twitter:description" content="pella offers simple and reliable Discord Bot and Minecraft server hosting in EU and US." data-react-helmet="true"><meta property="og:description" content="pella offers simple and reliable Discord Bot and Minecraft server hosting in EU and US." data-react-helmet="true"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@thestonechat"><meta name="twitter:title" content="pella - free discord bot hosting"><meta name="twitter:creator" content="@thestonechat"><meta name="twitter:image" content="https://pella.app/twitter_image.png"><title data-react-helmet="true">pella - free discord bot hosting</title><meta name="twitter:title" content="pella - free discord bot hosting" data-react-helmet="true"><meta property="og:title" content="pella - free discord bot hosting" data-react-helmet="true"><meta property="og:image" content="/twitter_image.png"><meta property="og:url" content="pella.app"><meta property="og:site_name" content="pella - free discord bot hosting"><meta property="og:locale" content="en_US"><link rel="apple-touch-icon" href="/logo.svg"><link rel="manifest" href="/manifest.json"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11070587829&amp;l=dataLayer&amp;cx=c&amp;gtm=45je52d0v9189678348za200"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-534NEWS5B2"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-11070587829"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-534NEWS5B2"),gtag("config","AW-11070587829")</script><link rel="preload" as="image" href="/minecraft-server-on-macbook.png"><link rel="preload" as="image" href="/logo.svg"><link rel="preload" as="image" href="/icons/minecraft.svg"><link rel="preload" as="image" href="/icons/discord.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"><script defer="defer" src="/static/js/main.daa02c75.js"></script><link href="/static/css/main.05765dcd.css" rel="stylesheet"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11070587829/?random=1739973593504&amp;cv=11&amp;fst=1739973593504&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be52d0v9185290367za200zb9189678348&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=102067808~102482432~102539968~102558064~102587591~102605417~102640600&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.pella.app%2Fhome&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=pella%20-%20free%20discord%20bot%20hosting&amp;npa=0&amp;pscdl=noapi&amp;auid=1446703597.1739973594&amp;uaa=x86&amp;uab=64&amp;uafvl=Not(A%253ABrand%3B99.0.0.0%7CMicrosoft%2520Edge%3B133.0.3065.69%7CChromium%3B133.0.6943.99&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><style type="text/css">#style_toast_container__DT-ei * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .style_toast-message__-UN8x {
+    opacity: 0;
+    position: fixed;
+    z-index: 1000;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 90%;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  }
+  .style_top-center__zZFy4,
+  .style_bottom-center__NH15O,
+  .style_center__GLmmM {
+    left: 50%;
+  }
+  .style_toast-message__-UN8x.toast-enter-active,
+  .style_toast-message__-UN8x.toast-appear-active {
+    opacity: 1;
+  }
+  .style_toast-message__-UN8x.toast-exit-active {
+    opacity: 0;
+  }
+  .style_toast-content__jaj36 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .style_toast-theme-content__JPkou {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .style_clickable__F3Zx7 {
+    cursor: pointer;
+  }
+  .style_loading__tn5sw .style_spinner-wrap__kOodK {
+    visibility: visible;
+    opacity: 1;
+    width: 1.1em;
+    margin-right: 12px;
+  }
+  .style_spinner-wrap__kOodK {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    margin-right: 0;
+  }
+  .style_spinner__mu5OS {
+    display: block;
+    overflow: hidden;
+    width: 1.1em;
+    height: 1.1em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    vertical-align: middle;
+    text-indent: -99999px;
+    -webkit-animation: style_spin__Ez3u3 1s ease-in-out infinite;
+            animation: style_spin__Ez3u3 1s ease-in-out infinite;
+  }
+  @-webkit-keyframes style_spin__Ez3u3 {
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes style_spin__Ez3u3 {
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  </style><style data-emotion="css" data-s=""></style>
+  
+
+
+
+
+
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript><iframe allow="join-ad-interest-group" data-tagging-id="AW-11070587829" data-load-time="1739973593520" height="0" width="0" src="https://td.doubleclick.net/td/rul/11070587829?random=1739973593504&amp;cv=11&amp;fst=1739973593504&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be52d0v9185290367za200zb9189678348&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=102067808~102482432~102539968~102558064~102587591~102605417~102640600&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.pella.app%2Fhome&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=pella%20-%20free%20discord%20bot%20hosting&amp;npa=0&amp;pscdl=noapi&amp;auid=1446703597.1739973594&amp;uaa=x86&amp;uab=64&amp;uafvl=Not(A%253ABrand%3B99.0.0.0%7CMicrosoft%2520Edge%3B133.0.3065.69%7CChromium%3B133.0.6943.99&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><div id="root"><main class="flex max-w-full flex-col gap-0 overflow-x-hidden"><div class="h-32"></div><nav class="fixed left-0 right-0 top-4 z-nav m-auto flex h-20 w-[800px] max-w-[95vw] items-center justify-between rounded-3xl bg-brand-dark-gray bg-opacity-50 px-8 ring-[1px] ring-brand-dark-gray backdrop-blur-lg"><a class="flex items-center gap-2" href="/"><img src="/logo.svg" alt="pella logo" width="50" height="50"><span class="text-2xl">pella</span></a><div class="absolute left-0 right-0 m-auto hidden w-fit gap-8 md:flex"><a href="/#pricing" class="duration-200 hover:opacity-50">Pricing</a><a href="https://status.pella.app/" target="__blank" class="duration-200 hover:opacity-50">Status</a><a href="/blog" class="duration-200 hover:opacity-50">Blog</a><a href="https://discord.gg/QWVhbD9THW" target="__blank" class="duration-200 hover:opacity-50">Discord</a></div><div class="hidden gap-4 md:flex"><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-transparent hover:opacity-50 font-bold" href="/login" target="_self">LOGIN</a><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-bold" href="/signup" target="_self">SIGN UP</a></div><div class="flex cursor-pointer flex-col gap-1 sm:flex md:hidden"><div class="h-1 w-8 rounded-md bg-brand-light-gray"></div><div class="h-1 w-8 rounded-md bg-brand-light-gray"></div><div class="h-1 w-8 rounded-md bg-brand-light-gray"></div></div></nav><div class="relative z-[-1] max-w-full"><div class="absolute z-[-1] h-40 w-40 rounded-full bg-brand-purple blur-[128px] transition-all duration-[10s] sm:h-64 sm:w-64 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px]" style="left: 1129.69px; top: -48.9173px;"></div><div class="absolute z-[-1] h-40 w-40 rounded-full blur-[128px] transition-all duration-[10s] sm:h-64 sm:w-64 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px] bg-brand-light" style="left: 807.311px; top: -58.8886px;"></div><div class="absolute z-[-1] h-40 w-40 rounded-full blur-[128px] transition-all duration-[10s] sm:h-64 sm:w-64 md:h-96 md:w-96 lg:h-[500px] lg:w-[500px] bg-brand-light" style="left: 979.185px; top: -52.0248px;"></div></div><div class="relative flex w-full flex-col items-center justify-center gap-4 px-16 pb-40 pt-16 lg:flex-row"><div class="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left"><div><h1 class="text-5xl font-bold">Simple, Reliable &amp; Affordable.</h1><h2 class="text-gray-400">Join pella and experience the redefined cloud.</h2></div><div class="flex gap-4"><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 w-fit" href="/signup" target="_self">Get Started <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right-long" class="svg-inline--fa fa-arrow-right-long ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path></svg></a><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand-light-gray hover:bg-opacity-75 w-20 sm:w-32" href="/#pricing" target="_self">Pricing</a></div><div class="flex flex-col items-center gap-2 sm:flex-row"><a href="https://www.trustpilot.com/review/pella.app" target="_blank" rel="noreferrer" class="flex w-fit shrink-0 cursor-pointer flex-col gap-1 rounded-md border-[1px] border-brand-green border-opacity-20 bg-brand-green bg-opacity-10 p-2 px-4 backdrop-blur-xl"><div class="flex items-center justify-between gap-2"><div class="text-sm font-bold">Trustpilot</div><div class="text-xs font-bold opacity-50">Rated 4.7/5</div></div><div class="flex gap-2"><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></div><div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half" class="svg-inline--fa fa-star-half h-5 w-5 text-brand-green" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 0c-12.2 .1-23.3 7-28.6 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3L288 439.8V0zM429.9 512c1.1 .1 2.1 .1 3.2 0h-3.2z"></path></svg></div></div></a><div class="flex max-h-full max-w-full flex-col overflow-auto rounded-md w-full bg-transparent"><div class="flex h-full max-h-full flex-col overflow-auto rounded-md bg-brand-secondary p-4 w-full gap-1 border-[1px] border-white border-opacity-10 bg-opacity-50 py-2 backdrop-blur-xl"><div class="flex items-center justify-between gap-2"><div class="text-sm font-bold">Live Stats</div></div><div class="flex gap-4"><div class="flex items-center gap-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user h-4 w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>31335</div><div class="flex items-center gap-1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="server" class="svg-inline--fa fa-server h-4 w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"></path></svg>23398</div></div></div></div></div></div><div class="css-1bwerz7" style="animation-delay: 0ms;"><div class="hidden w-full -skew-x-3 -skew-y-3 shadow-2xl md:flex lg:max-w-[500px] lg:-skew-x-6 lg:-skew-y-3 xl:max-w-[600px]"><div class="flex max-h-[400px] min-h-[400px] min-w-[750px] rounded-lg border-[1px] border-brand-light-gray bg-black p-4 shadow-2xl"><div class="flex w-full flex-col gap-4 md:flex-row"><div class="flex flex-col justify-between"><div class="flex gap-2 overflow-auto md:flex-col"><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table-list" class="svg-inline--fa fa-table-list opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 0v64h64V96H64zm384 0H192v64H448V96zM64 224v64h64V224H64zm384 0H192v64H448V224zM64 352v64h64V352H64zm384 0H192v64H448V352z"></path></svg></div> Overview</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="screwdriver-wrench" class="svg-inline--fa fa-screwdriver-wrench opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"></path></svg></div> Manage</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="box-archive" class="svg-inline--fa fa-box-archive opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z"></path></svg></div> Files</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="puzzle-piece" class="svg-inline--fa fa-puzzle-piece opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M192 104.8c0-9.2-5.8-17.3-13.2-22.8C167.2 73.3 160 61.3 160 48c0-26.5 28.7-48 64-48s64 21.5 64 48c0 13.3-7.2 25.3-18.8 34c-7.4 5.5-13.2 13.6-13.2 22.8c0 12.8 10.4 23.2 23.2 23.2H336c26.5 0 48 21.5 48 48v56.8c0 12.8 10.4 23.2 23.2 23.2c9.2 0 17.3-5.8 22.8-13.2c8.7-11.6 20.7-18.8 34-18.8c26.5 0 48 28.7 48 64s-21.5 64-48 64c-13.3 0-25.3-7.2-34-18.8c-5.5-7.4-13.6-13.2-22.8-13.2c-12.8 0-23.2 10.4-23.2 23.2V464c0 26.5-21.5 48-48 48H279.2c-12.8 0-23.2-10.4-23.2-23.2c0-9.2 5.8-17.3 13.2-22.8c11.6-8.7 18.8-20.7 18.8-34c0-26.5-28.7-48-64-48s-64 21.5-64 48c0 13.3 7.2 25.3 18.8 34c7.4 5.5 13.2 13.6 13.2 22.8c0 12.8-10.4 23.2-23.2 23.2H48c-26.5 0-48-21.5-48-48V343.2C0 330.4 10.4 320 23.2 320c9.2 0 17.3 5.8 22.8 13.2C54.7 344.8 66.7 352 80 352c26.5 0 48-28.7 48-64s-21.5-64-48-64c-13.3 0-25.3 7.2-34 18.8C40.5 250.2 32.4 256 23.2 256C10.4 256 0 245.6 0 232.8V176c0-26.5 21.5-48 48-48H168.8c12.8 0 23.2-10.4 23.2-23.2z"></path></svg></div> Addons</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="database" class="svg-inline--fa fa-database opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"></path></svg></div> Backups</button><button class="px-4 rounded-md select-none items-center gap-2 flex disabled:opacity-50 duration-200 bg-brand-secondary w-fit min-w-fit cursor-pointer justify-start py-2 text-sm font-bold hover:bg-opacity-100 md:w-48 opacity-30 hover:opacity-75"><div class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gear" class="svg-inline--fa fa-gear opacity-50" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"></path></svg></div> Settings</button></div></div><div class="flex h-full max-h-full w-full max-w-full flex-col gap-2 overflow-auto"><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary bg-gradient-to-br from-brand-gray to-brand-secondary p-[1px] overflow-auto h-full"><div class="flex w-full items-center justify-between rounded-md rounded-b-none bg-brand-secondary pl-4 pr-4 pt-4 text-xs font-bold text-white text-opacity-30"><span>FILE MANAGER </span><div class="flex items-center justify-center gap-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder-plus" class="svg-inline--fa fa-folder-plus size-4 cursor-pointer text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H192c20.1 0 39.1 9.5 51.2 25.6l19.2 25.6c6 8.1 15.5 12.8 25.6 12.8H448c35.3 0 64 28.7 64 64V416zM232 376c0 13.3 10.7 24 24 24s24-10.7 24-24V312h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H280V200c0-13.3-10.7-24-24-24s-24 10.7-24 24v64H168c-13.3 0-24 10.7-24 24s10.7 24 24 24h64v64z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-circle-plus" class="svg-inline--fa fa-file-circle-plus size-4 cursor-pointer text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384v38.6C310.1 219.5 256 287.4 256 368c0 59.1 29.1 111.3 73.7 143.3c-3.2 .5-6.4 .7-9.7 .7H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zm48 96a144 144 0 1 1 0 288 144 144 0 1 1 0-288zm16 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v48H368c-8.8 0-16 7.2-16 16s7.2 16 16 16h48v48c0 8.8 7.2 16 16 16s16-7.2 16-16V384h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H448V304z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="upload" class="svg-inline--fa fa-upload size-4 cursor-pointer text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg></div></div><div class="flex w-full flex-col gap-2 overflow-auto rounded-md bg-brand-secondary p-4 rounded-t-none pt-2 h-full max-h-full overflow-y-auto"><div class="flex max-h-full flex-col gap-1 overflow-y-auto"><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder" class="svg-inline--fa fa-folder " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">..</div></div><div class="flex min-w-fit items-center gap-2"></div></div><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="folder" class="svg-inline--fa fa-folder " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">modules</div></div><div class="flex min-w-fit items-center gap-2"><div><button class="flex items-center justify-center gap-2 outline-none p-0 h-6 w-6" id="headlessui-menu-button-:r4:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path fill="currentColor" d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"></path></svg></button></div></div></div><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" class="svg-inline--fa fa-file " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">main.py</div></div><div class="flex min-w-fit items-center gap-2"><span class="opacity-50">4 KB</span><div><button class="flex items-center justify-center gap-2 outline-none p-0 h-6 w-6" id="headlessui-menu-button-:r7:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path fill="currentColor" d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"></path></svg></button></div></div></div><div class="flex h-fit w-full cursor-pointer select-none items-center justify-between gap-2 rounded-md bg-black p-2 hover:bg-opacity-50"><div class="flex w-full items-center gap-2 overflow-hidden"><span class="w-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file" class="svg-inline--fa fa-file " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"></path></svg></span><div class="max-w-full overflow-hidden text-ellipsis text-nowrap">requirements.txt</div></div><div class="flex min-w-fit items-center gap-2"><span class="opacity-50">300 B</span><div><button class="flex items-center justify-center gap-2 outline-none p-0 h-6 w-6" id="headlessui-menu-button-:ra:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-vertical" class="svg-inline--fa fa-ellipsis-vertical " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path fill="currentColor" d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"></path></svg></button></div></div></div></div></div></div></div></div></div></div></div></div><div class="flex w-full justify-center md:mt-12"><section class="flex w-full max-w-[1250px] flex-col gap-32"><div class="flex h-fit flex-col items-center justify-center gap-8 px-4 text-center"><div class="flex flex-col items-center"><h1 class="text-4xl font-bold">Offers</h1><p class="opacity-50">Hosting so simple, we can't put it in words</p></div><div class="css-1c2fuzs" style="animation-delay: 0ms;"><div class="grid max-w-[1500px] grid-cols-1 gap-4 text-start md:grid-cols-2 lg:grid-cols-3"><a href="/free-express-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/javascript.png" alt="JavaScript Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/javascript.png" alt="JavaScript Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">EXPRESS.JS</h2></div><p class="text-left text-sm opacity-80">Host your Express.js apps effortlessly with our free and premium plans. Enjoy 99.9% uptime, seamless GitHub integration, and easy code uploads. Build powerful web applications with confidence! </p></a><a href="/free-fastapi-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/fastapi.svg" alt="FastAPI Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/fastapi.svg" alt="FastAPI Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">FASTAPI</h2></div><p class="text-left text-sm opacity-80">Launch your FastAPI projects with our reliable hosting platform. Whether you're building APIs or microservices, our service ensures 99.9% uptime and supports GitHub imports or direct uploads! </p></a><a href="/flask-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/flask.svg" alt="Flask Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50 invert"><div class="z-10 flex items-center gap-2"><img src="/icons/flask.svg" alt="Flask Logo" class="h-8 invert"><h2 class="text-xl font-bold sm:text-2xl">FLASK</h2></div><p class="text-left text-sm opacity-80">Develop and deploy Flask apps effortlessly with our hosting solutions. From GitHub imports to direct uploads, our platform guarantees 99.9% uptime for your Python-based projects. </p></a><a href="/free-django-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/django.svg" alt="Django Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/django.svg" alt="Django Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">DJANGO</h2></div><p class="text-left text-sm opacity-80">Bring your Django web projects to life with our secure hosting plans. Benefit from 99.9% uptime, GitHub integration, and direct upload options for a smooth development experience. </p></a><a href="/discord-bot-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/discord.svg" alt="Discord Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/discord.svg" alt="Discord Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">DISCORD BOT</h2></div><p class="text-left text-sm opacity-80">We offer free and premium Discord Bot hosting with 99.9% uptime! Import your code from GitHub or upload it directly, pella has you covered! </p></a><a href="/telegram-bot-hosting" class="relative flex w-full flex-col gap-2 overflow-hidden rounded-lg border border-brand-light-gray border-opacity-30 bg-brand-secondary bg-opacity-50 p-4 duration-200 hover:-translate-y-2"><img src="/icons/telegram.svg" alt="Telegram Logo" class="absolute bottom-0 left-0 right-0 top-0 m-auto w-full blur-[128px] brightness-50"><div class="z-10 flex items-center gap-2"><img src="/icons/telegram.svg" alt="Telegram Logo" class="h-8"><h2 class="text-xl font-bold sm:text-2xl">TELEGRAM BOT</h2></div><p class="text-left text-sm opacity-80">Host your Telegram Bots for free or just $1.25/month. You can also use GitHub for your projects, as well as File Upload. </p></a></div></div></div><div class="flex h-full max-w-full flex-col items-center justify-center gap-8 px-4 text-center" id="pricing"><div class="flex flex-col items-center"><h1 class="text-4xl font-bold">Pricing</h1><p class="opacity-50">Do you like overpaying for compute? No? Welcome to pella</p></div><div class="flex h-fit w-full gap-2 overflow-x-auto pt-4 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3 xl:grid-cols-4"><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Free</div><div class="opacity-75">Best for hobby projects with low power requirements</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.1 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>100 MB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>5 GB Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$0/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Nano</div><div class="opacity-75">Includes all premium features for an unparalleled price</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.1 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>256 MB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$3/year</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Mini</div><div class="opacity-75">Best when you require more performance at low prices</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.25 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>512 MB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$1.80/quarter</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-brand"><div class="absolute -right-6 -top-4 z-dropdown rounded-full bg-brand px-6 py-2">Most Popular</div><div class="text-xl font-bold">Small</div><div class="opacity-75">Best for medium sized apps with a moderate traffic or need for more speed</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>0.5 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>1 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$1.25/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Medium</div><div class="opacity-75">Best for apps with high traffic or high performance requirements</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>1 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>2 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$2.49/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Large</div><div class="opacity-75">Great for most apps requiring great performance</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>2 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>4 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$4.99/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Larger</div><div class="opacity-75">Incredible speeds and unparalleled performance</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>3 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>8 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$9.99/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div><div class="flex max-h-full max-w-full flex-col rounded-md bg-brand-secondary h-full w-full overflow-visible"><div class="flex max-h-full flex-col bg-brand-secondary p-4 relative h-full w-full min-w-64 justify-between gap-4 overflow-visible rounded-lg border-[2px] border-[#FFFFFF20]"><div class="text-xl font-bold">Super</div><div class="opacity-75">Twice the power of Large, for when you want to run a beast</div><div class="mx-auto mt-auto h-[1px] w-[80%] rounded-full bg-white opacity-30"></div><div class="mx-auto flex flex-col gap-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"></path></svg>4 CPU</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-memory-stick size-6"><path d="M6 19v-3"></path><path d="M10 19v-3"></path><path d="M14 19v-3"></path><path d="M18 19v-3"></path><path d="M8 11V9"></path><path d="M16 11V9"></path><path d="M12 11V9"></path><path d="M2 15h20"></path><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z"></path></svg>16 GB RAM</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-drive size-6"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>Unmetered Disk</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ethernet-port size-6"><path d="m15 20 3-3h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2l3 3z"></path><path d="M6 8v1"></path><path d="M10 8v1"></path><path d="M14 8v1"></path><path d="M18 8v1"></path></svg>Unmetered Bandwidth</div></div><div class="text-3xl font-bold">$19.99/month</div><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 font-medium" href="/signup" target="_self">Continue</a></div></div></div></div></section></div><footer class="mt-20 w-screen py-4 text-center text-sm"><span>© 2025 pella</span></footer></main><div class="Toastify"></div></div><div id="clerk-components"></div><div class="fixed left-0 top-0 z-[100] flex h-screen w-screen flex-col items-center gap-8 bg-brand-dark-gray bg-opacity-50 p-4 backdrop-blur-xl translate-y-[-100%]"><div class="flex w-full justify-end p-4"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark h-8 w-8 p-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></div><div class="flex flex-col items-center justify-center gap-4"><a href="/#pricing" target="__blank" class="duration-200 hover:opacity-50">Pricing</a><a href="https://status.pella.app/" target="__blank" class="duration-200 hover:opacity-50">Status</a><a href="/blog" class="duration-200 hover:opacity-50">Blog</a><a href="https://discord.gg/QWVhbD9THW" target="__blank" class="duration-200 hover:opacity-50">Discord</a></div><div class="flex w-full flex-col items-center gap-2"><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-transparent hover:opacity-50 w-full font-bold" href="/login" target="_self">LOGIN</a><a class="px-4 py-2 rounded-md select-none items-center gap-2 flex justify-center disabled:opacity-50 duration-200 bg-brand hover:bg-opacity-75 w-full font-bold" href="/signup" target="_self">SIGN UP</a></div></div></body>
+</body></html>

@@ -1,0 +1,948 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    z-index: -1; /* Помещаем за контентом */
+}
+
+/* Баннер */
+.banner {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ffcc;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%; /* Делаем логотип круглым */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+
+/* Навигация */
+.navigation {
+    margin-left: auto;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Стили для товаров и услуг */
+.product-page {
+    padding: 100;
+    text-align: center;
+}
+
+.product-container, .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Элементы товаров и услуг */
+.product-item {
+    padding: 20px; /* Пример отступов */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+    max-width: 100%; /* Удалено ограничение по ширине */
+    text-align: left;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 255, 204, 0.8);
+}
+
+/* Стили для услуг с индивидуальными размерами */
+.animation-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 0.5s ease forwards;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+/* Общие стили для услуг */
+.animation-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 0.5s ease forwards;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    border-radius: 35px; /* Общий border-radius */
+    margin: 50px; /* Общий margin для блока */
+    padding: 30px; /* Общий padding для блока */
+    background: rgba(255, 255, 255, 0.35); /* Фоновый цвет */
+}
+
+/* Стили для заголовков */
+.animation-item h2 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    color: #ffa16b; /* Цвет текста */
+}
+
+.animation-item h3 {
+    font-size: 18px; /* Размер подзаголовка */
+    margin: 10px 0; /* Отступ сверху и снизу */
+    color: #ffbb94; /* Цвет текста */
+}
+
+/* Индивидуальные стили для каждого блока услуг */
+.service-montage {
+    background: rgba(255, 255, 255, 0.15);
+    width: 300px; /* Ширина блока */
+    height: 350px; /* Высота блока */
+}
+
+.service-quality {
+    background: rgba(255, 255, 255, 0.2);
+    width: 350px; /* Ширина блока */
+    height: 400px; /* Высота блока */
+}
+
+.service-frame-rate {
+    background: rgba(255, 255, 255, 0.25);
+    width: 280px; /* Ширина блока */
+    height: 330px; /* Высота блока */
+}
+
+.service-bitrate {
+    background: rgba(255, 255, 255, 0.3);
+    width: 320px; /* Ширина блока */
+    height: 360px; /* Высота блока */
+}
+
+.service-additional {
+    background: rgba(255, 255, 255, 0.35);
+    width: 500px; /* Ширина блока */
+    height: 350px; /* Высота блока */
+    margin: 50px; /* Увеличенный margin для этого блока */
+    padding: 50px; /* Увеличенный padding для этого блока */
+}
+
+.service-aspect-ratio {
+    background: rgba(255, 255, 255, 0.4);
+    width: 260px; /* Ширина блока */
+    height: 300px; /* Высота блока */
+}
+
+/* Пример нового товара */
+.service-new-item {
+    background: rgba(255, 255, 255, 0.45);
+    width: 370px; /* Ширина блока */
+    height: 380px; /* Высота блока */
+}
+
+.service-another-item {
+    background: rgba(255, 255, 255, 0.5);
+    width: 310px; /* Ширина блока */
+    height: 340px; /* Высота блока */
+}
+
+/* Эффект при наведении */
+.animation-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Изображение товара */
+.product-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Статус */
+.status-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 2px solid #a6ff41;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.status-image {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.status-text {
+    font-weight: bold;
+    color: #a6ff41;
+    font-size: 1.2em;
+    text-shadow: 5px 5px 5px rgb(8, 8, 8, 1.0);
+}
+
+/* Стили для обязательных услуг */
+.required {
+    color: #ff4757;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Анимация при загрузке */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Эффект при наведении на изображение товара */
+.product-image:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* Стили для обязательных услуг */
+.required {
+    background-color: #ff3d00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Если нужно добавить отступ снизу для родительского элемента */
+.parent-class {
+    padding-bottom: 50px;
+}
+
+/* Стили для футера с динамическим эффектом */
+.footer {
+    background: linear-gradient(135deg, rgb(13, 10, 41), rgb(48, 44, 99), rgb(35, 35, 62));
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Задаем ширину 100% */
+    position: static; /* Или static, если необходимо */
+    left: 0; /* Убедитесь, что футер начинается с левой стороны */
+    margin: 0; /* Убираем любые отступы */
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для футера */
+    border-top: 2px solid rgba(255, 174, 0, 0.5); /* Верхняя граница */
+}
+
+/* Стили для контейнера кнопок в футере */
+.button-container {
+    margin-top: 10px; /* Отступ сверху от описания */
+}
+
+/* Описание кнопок */
+.button-description {
+    font-size: 18px;
+    color: #ffae00; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ снизу от описания */
+}
+
+/* Стили для кнопок */
+.buttons {
+    display: flex;
+    justify-content: center; /* Центрирование кнопок */
+    gap: 15px; /* Отступ между кнопками */
+}
+
+/* Стиль кнопок */
+.dynamic-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Ширина кнопки */
+    height: 60px; /* Высота кнопки */
+    background-color: var(--primary-color);
+    border-radius: 50%; /* Круглая форма */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавный переход */
+    box-shadow: var(--box-shadow);
+    overflow: hidden; /* Скрыть переполнение */
+}
+
+/* Эффект при наведении на кнопку */
+.dynamic-button:hover {
+    background-color: var(--hover-bg-color); /* Цвет фона при наведении */
+    transform: translateY(-3px); /* Легкий подъем при наведении */
+    box-shadow: 0 8px 30px rgba(0, 255, 204, 0.8); /* Увеличение тени при наведении */
+}
+
+/* Стили для изображений внутри кнопок */
+.dynamic-button img {
+    width: 40px; /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+    object-fit: cover; /* Сохранение пропорций изображения */
+}
+
+/* Стили для ссылок в футере */
+.footer-links {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* Центрируем ссылки */
+}
+
+.footer-links a {
+    color: #ffae00;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.5s, transform 0.5s;
+    position: relative; /* Для анимации */
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ffae00;
+    left: 0;
+    bottom: -5px; /* Расположение под ссылкой */
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.footer-links a:hover {
+    color: #fff4c9;
+    transform: scale(1.1);
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1); /* Анимация появления подчеркивания */
+}
+
+.footer p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    opacity: 0.8; /* Немного прозрачности для текста */
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Дополнительные стили для кнопок */
+.button {
+    background-color: #00ffcc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Стили для форм */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+/* Стили для заголовков */
+h1 {
+    color: #00ffcc;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .product-container, .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .status-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status-image {
+        margin-bottom: 5px;
+    }
+
+    .status-text {
+        font-size: 1em;
+    }
+
+    .product-item, .animation-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 0.5em;
+    }
+}
+
+/* Анимация для элементов на странице */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.product-item, .animation-item {
+    animation: slideIn 0.5s ease forwards, bounce 2s infinite alternate;
+}
+
+/* Стили для кнопок с эффектом */
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.button:hover {
+    color: #000;
+}
+
+/* Стили для карточек услуг с динамическими эффектами */
+.service-card {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Индивидуальные стили для блоков услуг */
+.service-montage {
+    background: rgba(255, 255, 255, 0.15);
+    width: 300px;
+    height: 350px;
+}
+
+.service-quality {
+    background: rgba(255, 255, 255, 0.2);
+    width: 350px;
+    height: 400px;
+}
+
+.service-frame-rate {
+    background: rgba(255, 255, 255, 0.25);
+    width: 280px;
+    height: 330px;
+}
+
+.service-bitrate {
+    background: rgba(255, 255, 255, 0.3);
+    width: 320px;
+    height: 360px;
+}
+
+.service-additional {
+    background: rgba(255, 255, 255, 0.35);
+    width: 400px;
+    height: 450px;
+}
+
+.service-aspect-ratio {
+    background: rgba(255, 255, 255, 0.4);
+    width: 260px;
+    height: 300px;
+}
+
+/* Стили для заголовков услуг */
+.service-card h4 {
+    color: #00ffcc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для текста услуг */
+.service-card p {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Стили для иконок услуг */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.service-icon:hover {
+    transform: scale(1.2);
+}
+
+    /* Стили для футера с динамическим эффектом */
+    .footer {
+        background: linear-gradient(135deg, rgb(13, 10, 41), rgb(48, 44, 99), rgb(35, 35, 62));
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        width: 100vw; /* Используем ширину окна просмотра */
+        position: fixed; /* Или absolute, если нужно */
+        bottom: 110; /* Привязываем футер к нижней части окна */
+        left: 0; /* Устанавливаем его влево */
+        margin: 0; /* Убираем отступы */
+        animation: fadeIn 1s ease-in-out;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для футера */
+        border-top: 2px solid rgba(255, 174, 0, 0.5); /* Верхняя граница */
+    }
+    
+
+    .footer-links {
+        margin: 10px 0;
+    }
+
+    .footer-links a {
+        color: #00ffcc;
+        margin: 0 15px;
+        text-decoration: none;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+        color: #ffcc00;
+        transform: scale(1.1);
+    }
+
+    .footer p {
+        margin: 10px 0 0;
+        font-size: 0.9em;
+    }
+
+    /* Анимация текста в футере */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Стили для кнопки "Наверх" */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #00ffcc;
+        color: #000;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #ffcc00;
+        transform: scale(1.1);
+    }
+
+    /* Стили для анимации заголовков */
+    h1, h2, h3 {
+        animation: fadeIn 0.5s ease-in-out;
+        margin-bottom: 15px;
+    }
+
+    /* Стили для карточек с изображениями */
+    .image-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .image-card img {
+        width: 100%;
+        border-radius: 15px;
+        transition: transform 0.3s;
+    }
+
+    .image-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .image-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Стили для уведомлений */
+    .notification {
+        background-color: rgba(255, 255, 0, 0.9);
+        color: #000;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /* Стили для кнопок с эффектом */
+    .button {
+        position: relative;
+        overflow: hidden;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #00ffcc;
+        color: #000;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .button:hover {
+        background-color: #ffcc00;
+        transform: scale(1.05);
+    }
+
+    /* Элементы форм с эффектом */
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #00ffcc;
+        border-radius: 5px;
+        margin: 10px 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+        border-color: #ffcc00;
+        outline: none;
+    }
+
+    .divider {
+        border: none; /* Убираем стандартные стили границы */
+        height: 2px; /* Высота линии */
+        background-color: #00ffcc; /* Цвет линии */
+        margin: 0 auto; /* Центрируем линию */
+        width: 80%; /* Ширина линии */
+        max-width: 600px; /* Максимальная ширина линии */
+    }
+
+/* Конец стилей */
+
+
+
+
+
+
+
+
+
+
+/* Стили для анимации текста */
+.service-title {
+    font-size: 36px; /* Размер заголовка */
+    color: #ffa16b; /* Цвет текста */
+    text-align: center;
+    animation: rotateIn 1s ease forwards; /* Анимация при появлении */
+}
+
+.service-description {
+    font-size: 18px; /* Размер описания */
+    color: #ffbb94; /* Цвет текста */
+    text-align: center;
+    margin-top: 20px; /* Отступ сверху */
+    animation: fadeInUp 1s ease forwards; /* Анимация при появлении */
+}
+
+/* Анимация поворота */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-200deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Анимация появления с подъемом */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* Контейнер соглашения */
+.agreement-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Заголовки */
+h1, h3 {
+    color: #00ffcc;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Анимация заголовков */
+h1::after, h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #00ffcc;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+h1:hover::after, h3:hover::after {
+    transform: scaleX(1);
+}
+
+/* Параграфы */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #00ffcc;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Кнопки */
+button {
+    background-color: #00ffcc;
+    color: #2c2c2c;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #00cc99;
+    transform: scale(1.05);
+}
+
+/* Ссылки */
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00cc99;
+}
+
+/* Препятствие копированию текста */
+.unselectable {
+    user-select: none; /* Отключает выделение текста */
+    -webkit-user-select: none; /* Для Safari */
+    -moz-user-select: none; /* Для Firefox */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0); /* Прозрачный фон */
+    pointer-events: auto; /* Включает взаимодействие с оверлеем */
+}
+
+
+
+
+
+.no-interaction {
+    pointer-events: none; /* Отключает все взаимодействия с элементом */
+    user-select: none; /* Запрещает выделение текста/изображения */
+}
+
+.disabled {
+    pointer-events: none; /* Отключает взаимодействие с элементом */
+    color: gray; /* Цвет текста, чтобы показать, что ссылка неактивна */
+    text-decoration: none; /* Убирает подчеркивание */
+    cursor: default; /* Изменяет курсор на стандартный, чтобы показать, что элемент не кликабельный */
+}
