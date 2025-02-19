@@ -10,10 +10,10 @@ body {
 
 / Стили для баннера /
 .banner {
-    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('img/fon.gif'); / Градиент + изображение /
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('fon.gif'); / Градиент + изображение /
     background-size: cover;
     background-position: center;
-    height: 12vh; / Высота баннера /
+    height: 15vh; / Высота баннера /
     display: flex;
     align-items: center; / Выравнивание содержимого по центру /
     padding: 0 20px; / Отступы по бокам /
@@ -73,6 +73,7 @@ h1 {
 
     h1 {
         font-size: 24px; / Уменьшаем размер заголовка /
+        text-align: center; / Центрируем заголовок /
     }
 
     .nav-list {
@@ -82,64 +83,58 @@ h1 {
 
     .nav-item {
         margin: 5px 0; / Вертикальные отступы между элементами навигации /
+        text-align: center; / Центрируем текст навигации /
     }
 }
 
-/ Адаптация для более крупных экранов /
-@media (min-width: 1200px) {
-    h1 {
-        font-size: 48px; / Увеличиваем размер заголовка на крупных экранах /
-    }
-
-    .nav-item a {
-        font-size: 18px; / Увеличиваем размер шрифта для навигации /
-    }
-}
-
-
-
-/* Стили для раздела "О нас" */
+/ Стили для раздела "О нас" /
 .about {
     background: linear-gradient(135deg, rgba(25, 25, 25, 1), rgba(0, 0, 0, 0.8));
     padding: 80px 20px;
     text-align: center;
     position: relative;
-    overflow: hidden; /* Скрываем избыток для анимации */
-    color: #ffffff; /* Цвет текста */
+    overflow: hidden; / Скрываем избыток для анимации /
+    color: #ffffff; / Цвет текста /
 }
 
 .about-content {
     display: flex;
-    align-items: center; /* Выравнивание по центру по вертикали */
-    justify-content: center; /* Центрирование содержимого */
-    max-width: 1200px; /* Ограничение ширины контента */
-    margin: 0 auto; /* Центрирование на странице */
+    align-items: center; / Выравнивание по центру по вертикали /
+    justify-content: center; / Центрирование содержимого /
+    max-width: 1200px; / Ограничение ширины контента /
+    margin: 0 auto; / Центрирование на странице /
 }
 
 .about-logo {
-    border-radius: 50%; /* Делаем логотип круглым */
-    width: 550px; /* Измените размер изображения по желанию */
-    margin-right: 40px; /* Отступ справа от логотипа */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Плавная анимация */
-    opacity: 0.9; /* Свечение логотипа */
+    border-radius: 50%; / Делаем логотип круглым /
+    width: 550px; / Измените размер изображения по желанию /
+    margin-right: 40px; / Отступ справа от логотипа /
+    transition: transform 0.5s ease, opacity 0.5s ease; / Плавная анимация /
+    opacity: 0.9; / Свечение логотипа /
 }
 
 .about-logo:hover {
-    transform: scale(1.1); /* Увеличение логотипа при наведении */
-    opacity: 1; /* Увеличение прозрачности */
+    transform: scale(1.1); / Увеличение логотипа при наведении /
+    opacity: 1; / Увеличение прозрачности /
 }
 
-/* Адаптация для мобильных устройств */
+/* Адаптация для мобильных устройств в разделе "О нас" */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column; /* Вертикальная ориентация для мобильных */
         text-align: center; /* Центрирование текста */
+        padding: 20px; /* Уменьшаем отступы для компактности */
     }
 
     .about-logo {
-        width: 300px; /* Уменьшаем размер логотипа для мобильных */
+        width: 250px; /* Уменьшаем размер логотипа для мобильных */
         margin-right: 0; /* Убираем отступ справа */
-        margin-bottom: 20px; /* Добавляем отступ снизу */
+        margin-bottom: 15px; /* Добавляем отступ снизу */
+    }
+
+    .about {
+        padding: 40px 10px; /* Уменьшаем отступы для мобильных */
+        font-size: 14px; /* Уменьшаем размер текста для удобства чтения на мобильных */
     }
 }
 
@@ -149,6 +144,10 @@ h1 {
         width: 600px; /* Увеличиваем размер логотипа на крупных экранах */
     }
 }
+
+
+
+
 
 /* Стиль для текстовой части */
 .text-content {
