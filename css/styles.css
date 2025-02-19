@@ -385,20 +385,28 @@ h2 {
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 товара в строке на планшетах */
-    }
-
-    .product-image {
-        height: 120px; /* Уменьшение высоты изображения на мобильных устройствах */
+        gap: 20px; /* Отступы между товарами */
     }
 
     .product-item {
         padding: 10px; /* Уменьшение отступов на планшетах */
+    }
+
+    /* Добавляем свободный блок */
+    .product-grid::after {
+        content: '';
+        grid-column: span 1; /* Один свободный блок */
     }
 }
 
 @media (max-width: 480px) {
     .products-title {
         font-size: 36px; /* Дополнительное уменьшение для маленьких экранов */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* Один товар в строке на мобильных устройствах */
+        gap: 20px; /* Отступы между товарами */
     }
 
     .product-item {
@@ -421,7 +429,14 @@ h2 {
         padding: 8px 16px; /* Уменьшение отступов кнопки */
         font-size: 0.9em; /* Уменьшение размера шрифта для кнопки */
     }
+
+    /* Добавляем свободный блок */
+    .product-grid::after {
+        content: '';
+        grid-column: span 1; /* Один свободный блок */
+    }
 }
+
 
 
 
