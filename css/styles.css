@@ -13,7 +13,7 @@ body {
     background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('fon.gif'); /* Градиент + изображение */
     background-size: cover;
     background-position: center;
-    height: 50vh; /* Полный экран */
+    height: 15vh; /* Полный экран */
     display: flex;
     align-items: center; /* Выравнивание содержимого по центру */
     padding: 0 20px; /* Отступы по бокам */
