@@ -1,0 +1,325 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    z-index: -1; /* Помещаем за контентом */
+}
+
+/* Баннер */
+.banner {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px; /* Уменьшено для мобильных */
+    text-align: center;
+    border-bottom: 2px solid #00ffcc;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column; /* Изменено для мобильных */
+    align-items: center;
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем логотип */
+}
+
+.logo {
+    width: 40px; /* Уменьшено для мобильных */
+    height: 40px; /* Уменьшено для мобильных */
+    margin-right: 5px; /* Уменьшено для мобильных */
+    border-radius: 50%; /* Делаем логотип круглым */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+
+/* Навигация */
+.navigation {
+    margin-left: auto;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: block; /* Изменено для мобильных */
+    margin: 5px 0; /* Уменьшено для мобильных */
+}
+
+.nav-item a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Стили для товаров и услуг */
+.product-page {
+    padding: 20px; /* Уменьшено для мобильных */
+    text-align: center;
+}
+
+.product-container, .service-container {
+    display: flex;
+    flex-direction: column; /* Изменено для мобильных */
+    align-items: center; /* Центрируем товары и услуги */
+}
+
+/* Элементы товаров и услуг */
+.product-item {
+    padding: 10px; /* Уменьшено для мобильных */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 10px; /* Уменьшено для мобильных */
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+    width: 90%; /* Ширина 90% для мобильных */
+    text-align: left;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 255, 204, 0.8);
+}
+
+/* Стили для услуг с индивидуальными размерами */
+.animation-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 0.5s ease forwards;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    border-radius: 15px; /* Общий border-radius */
+    margin: 10px; /* Уменьшено для мобильных */
+    padding: 15px; /* Уменьшено для мобильных */
+    background: rgba(255, 255, 255, 0.35); /* Фоновый цвет */
+}
+
+/* Стили для заголовков */
+.animation-item h2 {
+    font-size: 20px; /* Уменьшено для мобильных */
+    margin-bottom:     10px; /* Уменьшено для мобильных */
+    color: #ffa16b; /* Цвет текста */
+}
+
+.animation-item h3 {
+    font-size: 16px; /* Уменьшено для мобильных */
+    margin: 5px 0; /* Уменьшено для мобильных */
+    color: #ffbb94; /* Цвет текста */
+}
+
+/* Базовые стили для блоков услуг */
+.service-container {
+    display: flex;
+    flex-direction: column; /* Изменено для мобильных */
+    align-items: center; /* Центрируем блоки */
+}
+
+/* Индивидуальные стили для каждого блока услуг */
+.service-montage,
+.service-quality,
+.service-frame-rate,
+.service-bitrate,
+.service-additional,
+.service-aspect-ratio {
+    background: rgba(255, 255, 255, 0.15);
+    width: 90%; /* Устанавливаем ширину блоков на 90% для мобильных */
+    height: auto; /* Высота автоматически подстраивается под содержимое */
+    margin: 10px auto; /* Центрируем блоки */
+    padding: 15px; /* Уменьшено для мобильных */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .product-container, .service-container {
+        flex-direction: column; /* Мобильная верстка */
+        align-items: center;
+    }
+
+    .nav-item {
+        display: block; /* Изменено для мобильных */
+        margin: 5px 0; /* Уменьшено для мобильных */
+    }
+
+    .banner-content {
+        flex-direction: column; /* Верстка для мобильных */
+        align-items: center;
+    }
+
+    .status-container {
+        flex-direction: column; /* Верстка для мобильных */
+        align-items: flex-start;
+    }
+
+    .status-image {
+        margin-bottom: 5px;
+    }
+
+    .status-text {
+        font-size: 1em; /* Уменьшено для мобильных */
+    }
+
+    .product-item,
+    .animation-item {
+        width: 90%; /* Ширина 90% для мобильных */
+        margin: 10px 0; /* Уменьшено для мобильных */
+    }
+
+    .footer {
+        padding: 15px; /* Уменьшено для мобильных */
+    }
+
+    .footer-links a {
+        display: block; /* Верстка для мобильных */
+        margin: 5px 0; /* Уменьшено для мобильных */
+    }
+
+    h1 {
+        font-size: 2em; /* Уменьшено для мобильных */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Уменьшено для мобильных */
+    }
+
+    h3 {
+        font-size: 1em; /* Уменьшено для мобильных */
+    }
+}
+
+/* Стили для футера с динамическим эффектом */
+.footer {
+    background: linear-gradient(135deg, rgb(13, 10, 41), rgb(48, 44, 99), rgb(35, 35, 62));
+    color: #ffffff;
+    padding: 15px; /* Уменьшено для мобильных */
+    text-align: center;
+    width: 100%; /* Задаем ширину 100% */
+    position: static; /* Или static, если необходимо */
+    left: 0; /* Убедитесь, что футер начинается с левой стороны */
+    margin: 0; /* Убираем любые отступы */
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для футера */
+    border-top: 2px solid rgba(255, 174, 0, 0.5); /* Верхняя граница */
+}
+
+/* Стили для кнопки "Наверх" */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Уменьшено для мобильных */
+    height: 50px; /* Уменьшено для мобильных */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3    s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ffcc00; /* Цвет при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Дополнительные стили для улучшения визуального восприятия */
+button {
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px; /* Уменьшено для мобильных */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffcc00; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+    margin: 10px 0; /* Уменьшено для мобильных */
+    text-align: center; /* Центрируем заголовки */
+}
+
+h1 {
+    font-size: 2.5em; /* Уменьшено для мобильных */
+}
+
+h2 {
+    font-size: 2em; /* Уменьшено для мобильных */
+}
+
+h3 {
+    font-size: 1.5em; /* Уменьшено для мобильных */
+}
+
+/* Стили для текста */
+p {
+    font-size: 1em; /* Уменьшено для мобильных */
+    line-height: 1.5; /* Увеличиваем интервал между строками */
+    margin: 10px 0; /* Уменьшено для мобильных */
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Ограничиваем ширину изображений */
+    height: auto; /* Сохраняем пропорции изображений */
+    border-radius: 10px; /* Скругляем углы изображений */
+}
+
+/* Общие стили для контейнеров */
+.container {
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 20px; /* Добавляем отступы */
+}
