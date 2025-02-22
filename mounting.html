@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles2.css">
+    <script>
+        // Функция для проверки, является ли устройство мобильным
+        function loadStylesheet() {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+
+            // Проверка на мобильное устройство
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                // Если мобильное устройство
+                link.href = 'styles2-1.css';
+            } else {
+                // Если ПК
+                link.href = 'styles2.css';
+            }
+
+            // Добавляем ссылку на CSS в head
+            document.head.appendChild(link);
+        }
+
+        // Загружаем стили при загрузке страницы
+        window.onload = loadStylesheet;
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>BHStore - Монтаж</title>
     <style>
