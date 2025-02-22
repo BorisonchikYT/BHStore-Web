@@ -85,6 +85,84 @@ canvas {
     align-items: center; /* Центрируем товары и услуги */
 }
 
+
+/* Стили для раздела "О нас" */
+.about {
+    background: linear-gradient(135deg, rgba(25, 25, 25, 1), rgba(0, 0, 0, 0.8));
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Скрываем избыток для анимации */
+    color: #ffffff; /* Цвет текста */
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: center; /* Центрирование содержимого */
+    max-width: 1200px; /* Ограничение ширины контента */
+    margin: 0 auto; /* Центрирование на странице */
+}
+
+.about-logo {
+    border-radius: 50%; /* Делаем логотип круглым */
+    width: 550px; /* Измените размер изображения по желанию */
+    margin-right: 40px; /* Отступ справа от логотипа */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Плавная анимация */
+    opacity: 0.9; /* Свечение логотипа */
+}
+
+.about-logo:hover {
+    transform: scale(1.1); /* Увеличение логотипа при наведении */
+    opacity: 1; /* Увеличение прозрачности */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Вертикальная ориентация для мобильных */
+        text-align: center; /* Центрирование текста */
+    }
+
+    .about-logo {
+        width: 300px; /* Уменьшаем размер логотипа для мобильных */
+        margin-right: 0; /* Убираем отступ справа */
+        margin-bottom: 20px; /* Добавляем отступ снизу */
+    }
+
+    .text-content {
+        max-width: 90%; /* Увеличиваем ширину текстового блока для мобильных */
+        text-align: center; /* Центрируем текст */
+        margin: 0 auto; /* Центрируем текстовый блок */
+    }
+
+    h2 {
+        font-size: 36px; /* Уменьшаем размер заголовка для мобильных */
+        margin-bottom: 15px; /* Уменьшаем отступ */
+    }
+
+    .text-content p {
+        font-size: 16px; /* Уменьшаем размер текста */
+    }
+
+    .text-content ul li {
+        padding: 8px; /* Уменьшаем отступ внутри пунктов списка */
+    }
+}
+
+/* Ключевые кадры для анимации */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Элементы товаров и услуг */
 .product-item {
     padding: 10px; /* Уменьшено для мобильных */
