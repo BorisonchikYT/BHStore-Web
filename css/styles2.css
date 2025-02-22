@@ -137,6 +137,21 @@ canvas {
     color: #ffbb94; /* Цвет текста */
 }
 
+
+
+
+/* Базовые стили для блоков услуг */
+.service-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку */
+    justify-content: center; /* Центрирует блоки по горизонтали */
+}
+
+.animation-item {
+    margin: 10px; /* Отступ между блоками */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавим тень для визуального эффекта */
+}
+
 /* Индивидуальные стили для каждого блока услуг */
 .service-montage {
     background: rgba(255, 255, 255, 0.15);
@@ -175,6 +190,33 @@ canvas {
     width: 260px; /* Ширина блока */
     height: 300px; /* Высота блока */
 }
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .service-montage,
+    .service-quality,
+    .service-frame-rate,
+    .service-bitrate,
+    .service-additional,
+    .service-aspect-ratio {
+        width: 90%; /* Устанавливаем ширину блоков на 90% для мобильных */
+        height: auto; /* Высота автоматически подстраивается под содержимое */
+        margin: 10px auto; /* Центрируем блоки */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-montage,
+    .service-quality,
+    .service-frame-rate,
+    .service-bitrate,
+    .service-additional,
+    .service-aspect-ratio {
+        font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+}
+
+
 
 /* Пример нового товара */
 .service-new-item {
