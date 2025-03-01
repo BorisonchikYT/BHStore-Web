@@ -1,21 +1,22 @@
 /* Основные стили */
 body {
-    font-family: 'Orbitron', sans-serif;
-    text-align: center; /* Центрирование текста */
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #ffffff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    position: relative; /* Для позиционирования canvas */
 }
 
+/* Эффект фона с анимацией */
 canvas {
-    position: absolute; /* Абсолютное позиционирование */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ширина 100% */
-    height: 100%; /* Высота 100% */
-    z-index: -1; /* Помещаем за контентом */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* Баннер */
@@ -31,6 +32,7 @@ canvas {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Поддержка для мобильных */
 }
 
 /* Логотип */
@@ -43,8 +45,8 @@ canvas {
     width: 50px;
     height: 50px;
     margin-right: 10px;
-    border-radius: 50%; /* Делаем логотип круглым */
-    object-fit: cover; /* Сохраняем пропорции изображения */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Навигация */
@@ -55,10 +57,11 @@ canvas {
 .nav-list {
     list-style: none;
     padding: 0;
+    display: flex; /* Используем flex для навигации */
+    flex-wrap: wrap; /* Поддержка для мобильных */
 }
 
 .nav-item {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -72,6 +75,71 @@ canvas {
     color: #ffcc00;
     transform: scale(1.1);
 }
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column; /* Вертикальная ориентация для мобильных */
+        align-items: center; /* Центрирование содержимого */
+    }
+
+    .navigation {
+        margin-top: 10px; /* Отступ сверху для навигации */
+    }
+
+    .nav-item {
+        margin: 5px 10px; /* Уменьшаем отступы для мобильных */
+    }
+
+    .logo {
+        width: 40px; /* Уменьшаем размер логотипа для мобильных */
+        height: 40px; /* Уменьшаем размер логотипа для мобильных */
+    }
+}
+
+/* Дополнительные стили для улучшения визуала */
+.banner {
+    position: relative; /* Для добавления псевдоэлемента */
+    overflow: hidden; /* Скрытие избытка */
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05); /* Легкий эффект наложения */
+    pointer-events: none; /* Игнорируем взаимодействие с псевдоэлементом */
+    animation: pulse 5s infinite; /* Пульсирующий эффект */
+}
+
+/* Анимация пульсации фона */
+@keyframes pulse {
+    0% {
+        opacity: 0.05;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+
 
 /* Стили для товаров и услуг */
 .product-page {
@@ -146,11 +214,22 @@ canvas {
     display: flex;
     flex-wrap: wrap; /* Позволяет блокам переноситься на новую строку */
     justify-content: center; /* Центрирует блоки по горизонтали */
+    margin: 20px; /* Отступ вокруг контейнера */
 }
 
+/* Индивидуальные стили для каждого блока услуг */
 .animation-item {
-    margin: 10px; /* Отступ между блоками */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Добавим тень для визуального эффекта */
+    margin: 15px; /* Отступ между блоками */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Добавим тень для визуального эффекта */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden; /* Скрываем избыток содержимого */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+}
+
+/* Эффект при наведении на блок услуги */
+.animation-item:hover {
+    transform: translateY(-5px); /* Подъем блока при наведении */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
 }
 
 /* Индивидуальные стили для каждого блока услуг */
@@ -183,7 +262,9 @@ canvas {
     width: 500px; /* Ширина блока */
     height: 350px; /* Высота блока */
     margin: 50px; /* Увеличенный margin для этого блока */
-    padding: 50px; /* Увеличенный padding для этого блока */
+    padding: 30px; /* Увеличенный padding для этого блока */
+    border: 2px solid #00aaff; /* Граница для выделения */
+    border-radius: 10px; /* Закругленные углы */
 }
 
 .service-aspect-ratio {
@@ -194,12 +275,7 @@ canvas {
 
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
-    .service-montage,
-    .service-quality,
-    .service-frame-rate,
-    .service-bitrate,
-    .service-additional,
-    .service-aspect-ratio {
+    .animation-item {
         width: 90%; /* Устанавливаем ширину блоков на 90% для мобильных */
         height: auto; /* Высота автоматически подстраивается под содержимое */
         margin: 10px auto; /* Центрируем блоки */
@@ -207,12 +283,7 @@ canvas {
 }
 
 @media (max-width: 480px) {
-    .service-montage,
-    .service-quality,
-    .service-frame-rate,
-    .service-bitrate,
-    .service-additional,
-    .service-aspect-ratio {
+    .animation-item {
         font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
     }
 }
@@ -247,37 +318,77 @@ canvas {
     transition: transform 0.3s;
 }
 
-/* Статус */
+/* Общие стили для контейнера статуса */
 .status-container {
     display: flex;
     align-items: center;
-    background-color: rgba(0, 255, 0, 0.1);
-    border: 2px solid #a6ff41;
-    border-radius: 8px;
-    padding: 5px;
-    margin-top: 5px;
+    background-color: rgba(0, 255, 0, 0.1); /* Полупрозрачный фон */
+    border: 2px solid #a6ff41; /* Зеленая рамка */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 10px; /* Увеличенный отступ */
+    margin-top: 10px; /* Отступ сверху */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для глубины */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
 }
 
+/* Эффект при наведении на контейнер статуса */
+.status-container:hover {
+    transform: translateY(-5px); /* Подъем при наведении */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Увеличение тени при наведении */
+}
+
+/* Стили для изображения статуса */
 .status-image {
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
+    width: 50px; /* Увеличенный размер изображения */
+    height: 50px; /* Увеличенный размер изображения */
+    margin-right: 15px; /* Увеличенный отступ справа */
+    border-radius: 50%; /* Круглая форма изображения */
+    object-fit: cover; /* Сохранение пропорций */
+    transition: transform 0.3s ease; /* Плавный переход для анимации */
 }
 
+/* Эффект при наведении на изображение статуса */
+.status-image:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+/* Стили для текста статуса */
 .status-text {
-    font-weight: bold;
-    color: #a6ff41;
-    font-size: 1.2em;
-    text-shadow: 5px 5px 5px rgb(8, 8, 8, 1.0);
+    font-weight: bold; /* Жирный шрифт */
+    color: #a6ff41; /* Цвет текста */
+    font-size: 1.5em; /* Увеличенный размер шрифта */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Мягкая тень для текста */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+/* Эффект при наведении на текст статуса */
+.status-text:hover {
+    color: #8cff7f; /* Изменение цвета текста при наведении */
 }
 
 /* Стили для обязательных услуг */
 .required {
-    color: #ff4757;
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
+    color: #ff4757; /* Красный цвет для обязательных услуг */
+    font-weight: bold; /* Жирный шрифт */
+    display: block; /* Блочный элемент */
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 1.1em; /* Увеличенный размер шрифта */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Мягкая тень для текста */
+    animation: fadeIn 0.5s ease-in-out; /* Анимация появления */
 }
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Начальная прозрачность */
+        transform: translateY(-10px); /* Начальное смещение */
+    }
+    to {
+        opacity: 1; /* Конечная прозрачность */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
 
 /* Анимация при загрузке */
 @keyframes slideIn {
@@ -470,19 +581,58 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 }
 
 /* Стили для заголовков */
+h1, h2, h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
 h1 {
     color: #00ffcc;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 3em; /* Увеличенный размер заголовка */
 }
 
 h2 {
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 2em; /* Увеличенный размер заголовка */
 }
 
 h3 {
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 1.5em; /* Увеличенный размер заголовка */
+}
+
+/* Стили для контейнеров */
+.product-container, .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Анимация для элементов на странице */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-item, .animation-item {
+    animation: slideIn 0.5s ease forwards, bounce 2s infinite alternate;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px; /* Закругленные углы */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s ease; /* Плавный переход при наведении */
+}
+
+.product-item:hover, .animation-item:hover {
+    transform: translateY(-5px); /* Подъем блока при наведении */
 }
 
 /* Адаптивные стили */
@@ -538,11 +688,11 @@ h3 {
     }
 
     h3 {
-        font-size: 0.5em;
+        font-size: 1em; /* Увеличенный размер заголовка для мобильных */
     }
 }
 
-/* Анимация для элементов на странице */
+/* Анимация для эффекта "прыжка" */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -552,14 +702,18 @@ h3 {
     }
 }
 
-.product-item, .animation-item {
-    animation: slideIn 0.5s ease forwards, bounce 2s infinite alternate;
-}
-
 /* Стили для кнопок с эффектом */
 .button {
     position: relative;
+    display: inline-block; /* Для кнопок */
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #00aaff; /* Цвет кнопки */
+    border: none;
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;
     overflow: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Плавные переходы */
 }
 
 .button::after {
@@ -581,24 +735,29 @@ h3 {
 }
 
 .button:hover {
-    color: #000;
+    color: #000; /* Цвет текста при наведении */
+    background-color: #00ffcc; /* Изменение цвета фона при наведении */
 }
 
-/* Стили для карточек услуг с динамическими эффектами */
+/* Основные стили для карточек услуг с динамическими эффектами */
 .service-card {
     border-radius: 15px;
     padding: 20px;
     margin: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+    position: relative; /* Для псевдоэлементов */
 }
 
+/* Эффекты при наведении на карточку */
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02); /* Подъем и увеличение */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* Индивидуальные стили для блоков услуг */
+/* Индивидуальные стили для блоков услуг с разными фонами */
 .service-montage {
     background: rgba(255, 255, 255, 0.15);
     width: 300px;
@@ -639,12 +798,15 @@ h3 {
 .service-card h4 {
     color: #00ffcc;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em; /* Увеличенный размер шрифта */
+    margin-bottom: 10px; /* Отступ снизу */
 }
 
 /* Стили для текста услуг */
 .service-card p {
     color: #ffffff;
     line-height: 1.5;
+    font-size: 1em; /* Размер шрифта */
 }
 
 /* Стили для иконок услуг */
@@ -652,11 +814,59 @@ h3 {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Плавный переход */
 }
 
 .service-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Увеличение иконки при наведении */
+    filter: drop-shadow(0 0 5px #00ffcc); /* Эффект тени */
+}
+
+/* Псевдоэлементы для декоративных эффектов */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.1); /* Полупрозрачный фон */
+    z-index: 0; /* Под карточкой */
+    transition: opacity 0.3s ease; /* Плавный переход */
+}
+
+.service-card:hover::before {
+    opacity: 0.2; /* Затемнение при наведении */
+}
+
+/* Стили для кнопок внутри карточек */
+.service-button {
+    background-color: #00aaff; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.service-button:hover {
+    background-color: #00ffcc; /* Изменение цвета при наведении */
+transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+/* Анимация загрузки для карточек */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
     /* Стили для футера с динамическим эффектом */
