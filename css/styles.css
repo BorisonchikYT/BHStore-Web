@@ -1,33 +1,32 @@
-/ Общие стили /
+/* Общие стили */
 body {
-    font-family: 'Orbitron', sans-serif;
-    color: #fff; /* Белый текст */
-    text-align: center; /* Центрирование текста */
-    height: 2000px; / Для демонстрации прокрутки /
+    height: 2000px; /* Для демонстрации прокрутки */
     background: linear-gradient(135deg, #121212, rgba(18, 18, 18, 1));
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    color: #ffffff;
 }
 
-/ Стили для баннера /
+/* Стили для баннера */
 .banner {
-    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('img/fon.gif');
+    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('fon.gif'); /* Градиент + изображение */
     background-size: cover;
     background-position: center;
-    height: 15vh; / Высота баннера /
+    height: 25vh; /* Полный экран */
     display: flex;
-    align-items: center; / Выравнивание содержимого по центру /
-    padding: 0 20px; / Отступы по бокам /
+    align-items: center; /* Выравнивание содержимого по центру */
+    padding: 0 20px; /* Отступы по бокам */
 }
 
-/ Логотип и название /
+/* Логотип и название */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
 .logo {
-    border-radius: 50%; / Делаем логотип круглым /
+    border-radius: 50%; /* Делаем логотип круглым */
     width: 90px;
     margin-right: 15px;
 }
@@ -38,104 +37,59 @@ h1 {
     text-shadow: 1px 1px 2px rgba(18, 18, 18, 1);
 }
 
-/ Навигация /
-.navigation {
-    margin-left: auto; / Отодвигаем навигацию вправо /
-}
 
-.nav-list {
-    list-style: none;
-    padding: 0;
-    display: flex; / Используем flexbox для списка /
-}
 
-.nav-item {
-    margin: 0 15px;
-}
 
-.nav-item a {
-    color: #00ffcc;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-}
 
-.nav-item a:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
-}
 
-/ Адаптация для мобильных устройств /
-@media (max-width: 768px) {
-    .banner {
-        flex-direction: column; / Вертикальная ориентация /
-        height: auto; / Авто высота для мобильного экрана /
-        padding: 20px; / Увеличиваем отступы для мобильных /
-    }
 
-    h1 {
-        font-size: 24px; / Уменьшаем размер заголовка /
-        text-align: center; / Центрируем заголовок /
-    }
 
-    .nav-list {
-        flex-direction: column; / Вертикальная навигация /
-        margin-top: 10px; / Отступ сверху для навигации /
-    }
 
-    .nav-item {
-        margin: 5px 0; / Вертикальные отступы между элементами навигации /
-        text-align: center; / Центрируем текст навигации /
-    }
-}
-
-/ Стили для раздела "О нас" /
+/* Стили для раздела "О нас" */
 .about {
     background: linear-gradient(135deg, rgba(25, 25, 25, 1), rgba(0, 0, 0, 0.8));
     padding: 80px 20px;
     text-align: center;
     position: relative;
-    overflow: hidden; / Скрываем избыток для анимации /
-    color: #ffffff; / Цвет текста /
+    overflow: hidden; /* Скрываем избыток для анимации */
+    color: #ffffff; /* Цвет текста */
 }
 
 .about-content {
     display: flex;
-    align-items: center; / Выравнивание по центру по вертикали /
-    justify-content: center; / Центрирование содержимого /
-    max-width: 1200px; / Ограничение ширины контента /
-    margin: 0 auto; / Центрирование на странице /
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: center; /* Центрирование содержимого */
+    max-width: 1200px; /* Ограничение ширины контента */
+    margin: 0 auto; /* Центрирование на странице */
+    position: relative; /* Для позиционирования внутренних элементов */
+    z-index: 1; /* Помещаем выше фона */
 }
 
 .about-logo {
-    border-radius: 50%; / Делаем логотип круглым /
-    width: 550px; / Измените размер изображения по желанию /
-    margin-right: 40px; / Отступ справа от логотипа /
-    transition: transform 0.5s ease, opacity 0.5s ease; / Плавная анимация /
-    opacity: 0.9; / Свечение логотипа /
+    border-radius: 50%; /* Делаем логотип круглым */
+    width: 550px; /* Измените размер изображения по желанию */
+    margin-right: 40px; /* Отступ справа от логотипа */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Плавная анимация */
+    opacity: 0.9; /* Свечение логотипа */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для логотипа */
 }
 
 .about-logo:hover {
-    transform: scale(1.1); / Увеличение логотипа при наведении /
-    opacity: 1; / Увеличение прозрачности /
+    transform: scale(1.1); /* Увеличение логотипа при наведении */
+    opacity: 1; /* Увеличение прозрачности */
 }
 
-/* Адаптация для мобильных устройств в разделе "О нас" */
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column; /* Вертикальная ориентация для мобильных */
         text-align: center; /* Центрирование текста */
-        padding: 20px; /* Уменьшаем отступы для компактности */
     }
 
     .about-logo {
-        width: 250px; /* Уменьшаем размер логотипа для мобильных */
+        width: 300px; /* Уменьшаем размер логотипа для мобильных */
         margin-right: 0; /* Убираем отступ справа */
-        margin-bottom: 15px; /* Добавляем отступ снизу */
-    }
-
-    .about {
-        padding: 40px 10px; /* Уменьшаем отступы для мобильных */
-        font-size: 14px; /* Уменьшаем размер текста для удобства чтения на мобильных */
+        margin-bottom: 20px; /* Добавляем отступ снизу */
     }
 }
 
@@ -145,10 +99,6 @@ h1 {
         width: 600px; /* Увеличиваем размер логотипа на крупных экранах */
     }
 }
-
-
-
-
 
 /* Стиль для текстовой части */
 .text-content {
@@ -161,6 +111,7 @@ h2 {
     margin-bottom: 20px;
     color: #ff00ff; /* Яркий цвет заголовка */
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Тень для заголовка */
+    animation: fadeIn 1s ease forwards; /* Анимация появления заголовка */
 }
 
 .text-content p {
@@ -172,6 +123,7 @@ h2 {
     animation: fadeInUp 0.8s forwards; /* Анимация появления текста */
 }
 
+/* Стили для списка */
 .text-content ul {
     list-style-type: none; /* Убираем стандартные маркеры списка */
     padding: 0;
@@ -182,14 +134,26 @@ h2 {
     padding: 10px;
     margin: 5px 0; /* Вертикальный отступ между пунктами списка */
     border-radius: 5px; /* Скругление углов */
-    transition: background 0.3s; /* Плавная анимация фона */
+    transition: background 0.3s, transform 0.3s; /* Плавная анимация фона и трансформации */
 }
 
 .text-content ul li:hover {
     background: rgba(255, 0, 255, 0.4); /* Увеличение фона при наведении */
+    transform: scale(1.05); /* Легкое увеличение элемента списка при наведении */
 }
 
 /* Ключевые кадры для анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -209,7 +173,9 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
+    background-image: url('path/to/your/background-image.jpg'); /* Добавьте изображение фона */
     background-size: cover;
+    background-position: center;
     opacity: 0.1; /* Низкая прозрачность фона */
     z-index: 0; /* Установить под контент */
     animation: pulse 10s infinite; /* Пульсирующая анимация фона */
@@ -228,21 +194,26 @@ h2 {
     }
 }
 
-
-
-
-
-
-
-
-
-
-/* Разделитель */
-.divider {
-    height: 5px;
-    background-color: #e7b954;
-    margin: 50px 5;
+/* Дополнительные стили для улучшения визуала */
+.about-content h2, .text-content p {
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавная анимация для текста */
 }
+
+.about-content h2:hover {
+    color: #ffcc00; /* Изменение цвета заголовка при наведении */
+    transform: translateY(-5px); /* Легкое поднятие заголовка при наведении */
+}
+
+.text-content p:hover {
+    color: rgba(255, 255, 255, 0.8); /* Изменение цвета текста при наведении */
+}
+
+/* Эффект тени для текста */
+.text-content p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для абзацев */
+}
+
+
 
 
 
@@ -259,7 +230,11 @@ h2 {
     padding: 60px 40px;
     background: linear-gradient(135deg, rgba(34, 34, 34, 1), rgba(18, 18, 18, 1));
     color: #ffffff; /* Текст по умолчанию белый */
-    border: 1px solid rgba(255, 0, 255, 0.3); /* Розовая рамка для эффекта киберпанка */
+    border: 1px solid rgba(255, 0, 255, 0.5); /* Розовая рамка для эффекта киберпанка */
+    position: relative;
+    overflow: hidden; /* Скрытие переполнения */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Тень для секции */
+    border-radius: 20px; /* Округление углов секции */
 }
 
 .products-title {
@@ -268,11 +243,24 @@ h2 {
     margin-bottom: 30px;
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.8); /* Эффект светящегося текста */
     font-family: 'Roboto', sans-serif; /* Шрифт для современного вида */
+    animation: fadeIn 1s ease-in; /* Анимация появления заголовка */
+}
+
+/* Анимация появления заголовка */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 товара в строке */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Адаптивная сетка */
     gap: 30px;
     max-width: 1200px; /* Максимальная ширина сетки */
     margin: 0 auto; /* Центрирование сетки */
@@ -280,20 +268,20 @@ h2 {
 
 .product-item {
     position: relative; /* Позволяет использовать абсолютное позиционирование для дочерних элементов */
-    background-color: rgba(50, 50, 50, 0.8);
+    background-color: rgba(50, 50, 50, 0.9); /* Более темный фон для контраста */
     border: 2px solid transparent;
     border-radius: 30px;
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; /* Плавные переходы */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     overflow: hidden; /* Чтобы скрыть переполнение */
 }
 
 .product-item:hover {
     transform: translateY(-10px) scale(1.05); /* Увеличение и подъем при наведении */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Добавление тени для глубины */
-    border-color: rgba(85, 85, 85, 0.8);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Добавление тени для глубины */
+    border-color: rgba(255, 0, 255, 0.8); /* Изменение цвета рамки при наведении */
 }
 
 .product-image {
@@ -301,11 +289,11 @@ h2 {
     height: 150px; /* Высота изображения */
     object-fit: cover; /* Обеспечивает сохранение пропорций */
     border-radius: 10px;
-    transition: transform 0.3s; /* Плавное увеличение */
+    transition: transform 0.3s ease; /* Плавное увеличение */
 }
 
 .product-item:hover .product-image {
-    transform: scale(1.05); /* Увеличение изображения при наведении */
+    transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
 .product-link {
@@ -316,7 +304,7 @@ h2 {
     border-radius: 30px;
     text-decoration: none;
     color: rgba(18, 18, 18, 1);
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
     font-weight: bold; /* Жирное начертание */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для кнопки */
 }
@@ -324,13 +312,15 @@ h2 {
 .product-link:hover {
     background: linear-gradient(135deg, #00c8ff, #5fffcf); /* Изменение градиента при наведении */
     transform: translateY(-3px); /* Легкий подъем при наведении на кнопку */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4); /* Увеличение тени для кнопки */
 }
 
 .price {
-    font-size: 1.3em; /* Размер шрифта */
+    font-size: 1.5em; /* Размер шрифта */
     color: #ff5722; /* Цвет текста */
     font-weight: bold; /* Жирное начертание */
     margin: 15px 0; /* Отступ вокруг цены */
+    text-shadow: 0 0 5px rgba(255, 87, 34, 0.8); /* Эффект светящегося текста */
 }
 
 .purchases {
@@ -351,6 +341,7 @@ h2 {
     font-weight: bold;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     z-index: 99; /* Высокий уровень стекирования */
+    transition: background 0.3s; /* Плавный переход фона */
 }
 
 .product-item.hit::before {
@@ -365,63 +356,22 @@ h2 {
     content: 'Скоро в продаже';
 }
 
-/* Дополнительные стили для адаптивности */
-@media (max-width: 768px) {
-    .products-title {
-        font-size: 48px; /* Уменьшение размера заголовка на планшетах */
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 товара в строке на планшетах */
-        gap: 20px; /* Отступы между товарами */
-    }
-
-    .product-item {
-        padding: 10px; /* Уменьшение отступов на планшетах */
-    }
-
-    /* Добавляем свободный блок */
-    .product-grid::after {
-        content: '';
-        grid-column: span 1; /* Один свободный блок */
-    }
+.product-item:hover::before {
+    background: rgba(255, 0, 255, 0.8); /* Изменение фона при наведении */
+    color: #fff; /* Цвет текста */
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .products-title {
-        font-size: 36px; /* Дополнительное уменьшение для маленьких экранов */
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(1, 1fr); /* Один товар в строке на мобильных устройствах */
-        gap: 20px; /* Отступы между товарами */
-    }
-
-    .product-item {
-        padding: 8px; /* Уменьшение отступов на мобильных устройствах */
+        font-size: 48px; /* Уменьшение размера заголовка на мобильных устройствах */
     }
 
     .price {
-        font-size: 1.1em; /* Уменьшение размера шрифта для цены */
-    }
-
-    .purchases {
-        font-size: 0.8em; /* Уменьшение размера шрифта для количества покупок */
-    }
-
-    .product-image {
-        height: 100px; /* Уменьшение высоты изображения на маленьких экранах */
+        font-size: 1.2em; /* Уменьшение размера цены на мобильных устройствах */
     }
 
     .product-link {
-        padding: 8px 16px; /* Уменьшение отступов кнопки */
-        font-size: 0.9em; /* Уменьшение размера шрифта для кнопки */
-    }
-
-    /* Добавляем свободный блок */
-    .product-grid::after {
-        content: '';
-        grid-column: span 1; /* Один свободный блок */
+        padding: 8px 15px; /* Уменьшение отступов для кнопки на мобильных устройствах */
     }
 }
 
@@ -432,51 +382,111 @@ h2 {
 
 
 
+/* Основные стили для раздела "Контакты" */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    color: #ffffff;
+    border: 2px solid #6669ff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden; /* Скрытие переполнения */
+}
 
+/* Анимация фона */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 105, 255, 0.1);
+    border-radius: 15px;
+    z-index: 0;
+    animation: pulse 6s infinite; /* Анимация пульсации */
+}
 
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
+.contact h2 {
+    font-size: 2.5rem; /* Увеличенный размер заголовка */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; /* Повышение уровня стекирования */
+    text-shadow: 0 0 10px rgba(102, 105, 255, 0.8); /* Эффект светящегося текста */
+}
 
+/* Стили для ссылок */
+.social-links {
+    margin-top: 20px;
+    z-index: 1; /* Повышение уровня стекирования */
+    position: relative;
+}
 
-        /* Основные стили для раздела "Контакты" */
-        .contact {
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 20px;
-            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
-            color: #ffffff;
-            border: 2px solid #6669ff;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-        }
+/* Стили для кнопок социальных сетей */
+.social-button {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
+}
 
-        /* Оформление заголовка */
-        .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+.social-button:hover {
+    transform: translateY(-5px); /* Подъем кнопки при наведении */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
 
-        /* Стили для ссылок */
-        .social-links {
-            margin-top: 10px;
-        }
+/* Стили для изображений */
+.social-icon {
+    width: 64px; /* Ширина изображения */
+    height: 64px; /* Высота изображения */
+    transition: transform 0.3s, filter 0.3s; /* Плавные переходы */
+}
 
-        /* Стили для кнопок социальных сетей */
-        .social-button {
-            margin: 0 10px;
-            display: inline-block;
-        }
+/* Эффект при наведении */
+.social-button:hover .social-icon {
+    transform: scale(1.2); /* Увеличение размера изображения */
+    filter: drop-shadow(0 0 10px rgba(102, 105, 255, 0.8)); /* Эффект тени */
+}
 
-        /* Стили для изображений */
-        .social-icon {
-            width: 64px; /* Ширина изображения */
-            height: 64px; /* Высота изображения */
-            transition: transform 0.3s;
-        }
+/* Дополнительные стили для текста */
+.contact p {
+    font-size: 1.2rem; /* Размер текста */
+    margin-top: 20px;
+    z-index: 1; /* Повышение уровня стекирования */
+    position: relative;
+}
 
-        /* Эффект при наведении */
-        .social-button:hover .social-icon {
-            transform: scale(1.1); /* Увеличение размера изображения */
-        }
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 2rem; /* Уменьшение размера заголовка на мобильных устройствах */
+    }
+
+    .social-icon {
+        width: 48px; /* Уменьшение размера иконок на мобильных устройствах */
+        height: 48px;
+    }
+
+    .contact p {
+        font-size: 1rem; /* Уменьшение размера текста на мобильных устройствах */
+    }
+}
+
 
 
 
@@ -485,24 +495,119 @@ h2 {
 /* Футер */
 .footer {
     background-color: rgba(18, 18, 18, 1);
-    padding: 20px;
+    padding: 40px 20px; /* Увеличено пространство для лучшего восприятия */
     text-align: center;
+    position: relative; /* Для позиционирования снежинок */
+    overflow: hidden; /* Скрытие переполнения */
+    color: #ffffff; /* Цвет текста */
+    font-family: 'Arial', sans-serif; /* Шрифт */
 }
 
-/* Убираем нижнюю границу для ссылок */
-.navigation a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ffab00;
-    transition: width 0.3s;
+/* Основной контейнер для контента */
+.container {
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center; /* Центрирование по вертикали */
+    height: 100vh; /* Высота контейнера на весь экран */
+    padding: 20px; /* Отступы */
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.8)); /* Градиентный фон */
 }
 
-.navigation a:hover::after {
-    width: 100%;
+/* Контейнер с содержимым */
+.content {
+    max-width: 400px; /* Максимальная ширина контейнера */
+    margin: 20px; /* Отступы вокруг контейнера */
+    padding: 30px; /* Внутренние отступы */
+    background: rgba(50, 50, 50, 0.9); /* Фон контейнера */
+    border-radius: 15px; /* Скругление углов */
+    box-shadow: 0 4px 30px rgba(0, 255, 255, 0.5); /* Тень для глубины */
+    animation: fadeIn 1s ease-in-out; /* Анимация появления */
 }
 
+/* Заголовки */
+h1, h3 {
+    color: #00ffcc; /* Цвет заголовков */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Эффект свечения */
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif; /* Шрифт заголовков */
+}
+
+/* Параграфы */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ffffff; /* Цвет текста параграфов */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+p:hover {
+    color: #00ffcc; /* Цвет текста при наведении */
+}
+
+/* Анимация появления контейнера */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Начальная позиция */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Конечная позиция */
+    }
+}
+
+
+.navigation {
+    background-color: transparent; /* Прозрачный фон для навигации */
+    position: fixed; /* Фиксируем навигацию */
+    top: 0; /* Прикрепляем к верхней части экрана */
+    right: 0; /* Прикрепляем к правой стороне экрана */
+    padding: 10px 20px; /* Отступы для навигации */
+    z-index: 1000; /* Убедитесь, что навигация выше других элементов */
+}
+
+.nav-list {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 100;
+    margin: 100;
+    display: flex; /* Используем flexbox для горизонтального выравнивания */
+    justify-content: flex-end; /* Выравниваем элементы по правому краю */
+}
+
+.nav-item {
+    margin-left: 20px; /* Промежуток между элементами навигации */
+}
+
+.nav-item a {
+    color: #ffab00; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.1rem;
+    font-weight: 500; /* Полужирный текст */
+    padding: 10px; /* Отступы для кликабельной области */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.nav-item a:hover {
+    color: #fff; /* Цвет при наведении */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Вертикальное положение на мобильных устройствах */
+        align-items: flex-end; /* Выравниваем элементы по правому краю */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Уменьшаем промежуток между элементами */
+    }
+}
+
+
+
+
+
+/* Снежинки */
 .snowflake {
     position: absolute;
     top: -20px;
@@ -513,9 +618,13 @@ h2 {
     animation: fall linear infinite;
 }
 
+/* Анимация падения снежинок */
 @keyframes fall {
-    to {
-        transform: translateY(101vh); /* Падает до низа экрана */
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateY(101vh) translateX(calc(-50% + random(100vw))); /* Эффект случайного движения */
     }
 }
 
@@ -555,29 +664,61 @@ h2 {
     }
 }
 
+/* Дополнительные стили для текста футера */
+.footer p {
+    margin: 10px 0;
+    font-size: 0.9rem; /* Размер текста */
+    animation: fadeInUp 0.5s ease forwards; /* Анимация появления текста */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px; /* Уменьшение отступов на мобильных устройствах */
+    }
+
+    .navigation a {
+        font-size: 1rem; /* Уменьшение размера шрифта на мобильных устройствах */
+    }
+
+    .snowflake {
+        font-size: 1.5em; /* Уменьшение размера снежинок на мобильных устройствах */
+    }
+}
 
 
 
 
 
 
+
+
+
+/* Основной контейнер */
+.container {
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center; /* Центрирование по вертикали */
+    height: 100vh; /* Высота контейнера на весь экран */
+    padding: 20px; /* Отступы */
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+}
 
 /* Контейнер соглашения */
 .agreement-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(30, 30, 30, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    position: relative;
-    animation: fadeIn 1s ease-in-out;
+    max-width: 400px; /* Максимальная ширина контейнера */
+    margin: 20px; /* Отступы вокруг контейнера */
+    padding: 30px; /* Внутренние отступы */
+    background: rgba(30, 30, 30, 0.9); /* Фон контейнера */
+    border-radius: 15px; /* Скругление углов */
+    box-shadow: 0 4px 30px rgba(0, 255, 255, 0.5); /* Тень для глубины */
+    animation: fadeIn 1s ease-in-out; /* Анимация появления */
 }
 
 /* Заголовки */
 h1, h3 {
-    color: #00ffcc;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    color: #00ffcc; /* Цвет заголовков */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Эффект свечения */
     margin-bottom: 15px;
     position: relative;
 }
@@ -588,7 +729,7 @@ h1::after, h3::after {
     display: block;
     width: 100%;
     height: 2px;
-    background: #00ffcc;
+    background: #00ffcc; /* Цвет нижней линии */
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -597,29 +738,65 @@ h1::after, h3::after {
 }
 
 h1:hover::after, h3:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(1); /* Анимация при наведении */
 }
 
 /* Параграфы */
 p {
     line-height: 1.6;
     margin-bottom: 15px;
-    transition: color 0.3s ease;
+    color: #ffffff; /* Цвет текста параграфов */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавный переход цвета и трансформации */
 }
 
 p:hover {
-    color: #00ffcc;
+    color: #00ffcc; /* Цвет текста при наведении */
+    transform: translateY(-2px); /* Легкий подъем текста при наведении */
 }
 
-/* Анимация появления */
+/* Анимация появления контейнера */
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
+        transform: translateY(20px); /* Начальная позиция */
     }
-    to {
+    100% {
         opacity: 1;
+        transform: translateY(0); /* Конечная позиция */
     }
 }
+
+/* Дополнительные стили для ссылок */
+a {
+    color: #00ffcc; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавные переходы для ссылок */
+}
+
+a:hover {
+    color: #ffffff; /* Цвет ссылки при наведении */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Эффект свечения при наведении */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .agreement-container {
+        padding: 20px; /* Уменьшение отступов на мобильных устройствах */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Уменьшение размера заголовка на мобильных устройствах */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Уменьшение размера подзаголовка на мобильных устройствах */
+    }
+
+    p {
+        font-size: 0.9rem; /* Уменьшение размера текста на мобильных устройствах */
+    }
+}
+
 
 /* Кнопки */
 button {
@@ -689,11 +866,7 @@ a:hover {
     }
 }
 
-body {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    background-size: 300% 300%;
-    animation: backgroundAnimation 10s ease infinite;
-}
+
 
 
 
@@ -766,3 +939,4 @@ body {
     background-color: #ffcc00;
     transform: scale(1.05);
 }
+
