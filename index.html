@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <title>BHStore</title>
 </head>
 <style>
 /* Стили для футера с динамическим эффектом */
 .footer {
-    background: linear-gradient(135deg, rgb(13, 10, 41), rgb(48, 44, 99), rgb(35, 35, 62));
+    position: relative; /* Обычное позиционирование */
     color: #ffffff;
-    padding: 20px;
+    padding: 20px; /* Отступы внутри футера */
     text-align: center;
-    width: 90%; /* Задаем ширину 90% */
-    max-width: 1200px; /* Ограничиваем максимальную ширину */
-    margin: 0 auto; /* Центрируем футер */
-    animation: fadeIn 1s ease-in-out;
+    max-width: 1200px; /* Максимальная ширина футера */
+    width: 100%; /* Ширина футера */
+    height: 60px; /* Фиксированная высота футера */
+    margin: 20px auto 0; /* Центрирование футера и отступ сверху */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для футера */
-    border-top: 2px solid rgba(255, 174, 0, 0.5); /* Верхняя граница */
-    border-radius: 8px; /* Скругленные углы футера */
+    border-top: 2px solid rgba(255, 196, 68, 0.5); /* Верхняя граница */
+    overflow: hidden; /* Скрыть переполнение */
 }
+
+.footer::before {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('fon2.jpg') no-repeat center center; /* Фоновое изображение */
+    background-size: cover; /* Масштабирование изображения */
+    opacity: 0.5; /* Прозрачность фона */
+    z-index: 0; /* Поместить под текстом */
+}
+
+.footer > * {
+    position: relative; /* Относительное позиционирование для текста */
+    z-index: 1; /* Поместить текст выше фона */
+}
+
+
+
 
 /* Анимация появления */
 @keyframes fadeIn {
@@ -207,8 +228,8 @@
 <body>
     <div class="banner">
         <div class="logo-container">
-            <img src="img/logotip.jpg" alt="Логотип" class="logo">
-            <h1>BHStore</h1>
+            <img src="logotip.jpg" alt="Логотип" class="logo">
+            <h1>BHS - Главная</h1>
         </div>
         <nav class="navigation">
             <ul class="nav-list">
@@ -222,7 +243,7 @@
     <section id="about" class="about">
         <h2 class="unselectable no-interaction">О нас</h2>
         <div class="about-content">
-            <img src="img/logotip.jpg" alt="Логотип" class="about-logo no-interaction">
+            <img src="logotip.jpg" alt="Логотип" class="about-logo no-interaction">
             <div class="text-content">
                 <p class="unselectable">Мы — команда профессионалов, мы не только профисионально настраиваем Discord сервера, но и делаем крутые сайты и у нас есть очень много других товаров.</p>
                 <p class="unselectable"><strong>Почему выбирают нас?</strong></p>
@@ -242,7 +263,7 @@
         <h2 class="products-title unselectable">Товары и услуги</h2>
         <div class="product-grid">
             <div class="product-item hit">
-                <img src="img/avatar.jpg" alt="Товар" class="product-image no-interaction">
+                <img src="avatar.jpg" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Создание аватарок</h3>
                 <p class="unselectable">Дизайн, и красивое изображение, Качество и многое другое...</p>
                 <span class="price unselectable">От 72₽</span>
@@ -250,7 +271,7 @@
                 <a href="picture.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item">
-                <img src="img/discord.jpg" alt="Товар" class="product-image no-interaction">
+                <img src="discord.jpg" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Настраивание Discord</h3>
                 <p class="unselectable">Боты, Настройка сервера, Роли каналы категории, Права доступа, Роли, Текста, Дизайн.</p>
                 <span class="price unselectable">От 650₽</span>
@@ -258,7 +279,7 @@
                 <a href="discord.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item">
-                <img src="img/montaz.png" alt="Товар" class="product-image no-interaction">
+                <img src="montaz.png" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Создание монтажа</h3>
                 <p class="unselectable">Анимации, Профисиональное монтирование.</p>
                 <span class="price unselectable">От 210₽</span>
@@ -266,7 +287,7 @@
                 <a href="mounting.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item">
-                <img src="img/preview.jpg" alt="Товар" class="product-image no-interaction">
+                <img src="preview.jpg" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Создание превью</h3>
                 <p class="unselectable">Дизайн, Изображение, и многое другое.</p>
                 <span class="price unselectable">От 82₽</span>
@@ -274,7 +295,7 @@
                 <a href="preview.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item">
-                <img src="img/telegram.jpg" alt="Товар" class="product-image no-interaction">
+                <img src="telegram.jpg" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Создание Telegram бота</h3>
                 <p class="unselectable">Коды, Система, и многое другое.</p>
                 <span class="price unselectable">От 72₽</span>
@@ -282,7 +303,7 @@
                 <a href="telegram.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item">
-                <img src="img/website.png" alt="Товар" class="product-image no-interaction">
+                <img src="website.png" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Создание сайта</h3>
                 <p class="unselectable">Дизайн, Оформление, Текста, Изображения, Коды, Анимации.</p>
                 <span class="price unselectable">От 850₽</span>
@@ -290,7 +311,7 @@
                 <a href="website.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item">
-                <img src="img/minecraft.jpg" alt="Товар" class="product-image no-interaction">
+                <img src="minecraft.jpg" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Minecraft фишки</h3>
                 <p class="unselectable">Моды, Плагины, Коды.</p>
                 <span class="price unselectable">От 1.000₽</span>
@@ -298,7 +319,7 @@
                 <a href="minecraft.html" class="product-link">Подробнее</a>
             </div>
             <div class="product-item soon">
-                <img src="img/roblox.jpg" alt="Товар" class="product-image no-interaction">
+                <img src="roblox.jpg" alt="Товар" class="product-image no-interaction">
                 <h3 class="unselectable">Roblox фишки</h3>
                 <p class="unselectable">Моды, Плагины, Коды.</p>
                 <span class="price unselectable">От 1.000₽</span>
