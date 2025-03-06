@@ -1,7 +1,7 @@
 /* Общие стили */
 body {
     height: 2000px; /* Для демонстрации прокрутки */
-    background: linear-gradient(135deg, #121212, rgba(18, 18, 18, 1));
+    background: url('fon2.jpg');
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -230,7 +230,7 @@ h2 {
     padding: 60px 40px;
     background: linear-gradient(135deg, rgba(34, 34, 34, 1), rgba(18, 18, 18, 1));
     color: #ffffff; /* Текст по умолчанию белый */
-    border: 1px solid rgba(255, 0, 255, 0.5); /* Розовая рамка для эффекта киберпанка */
+    border: 1px solid rgba(255, 141, 255, 0.5); /* Розовая рамка для эффекта киберпанка */
     position: relative;
     overflow: hidden; /* Скрытие переполнения */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Тень для секции */
@@ -241,7 +241,7 @@ h2 {
     text-align: center;
     font-size: 66px;
     margin-bottom: 30px;
-    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8); /* Эффект светящегося текста */
+    text-shadow: 0 0 10px rgba(78, 78, 78, 0.8); /* Эффект светящегося текста */
     font-family: 'Roboto', sans-serif; /* Шрифт для современного вида */
     animation: fadeIn 1s ease-in; /* Анимация появления заголовка */
 }
@@ -281,7 +281,7 @@ h2 {
 .product-item:hover {
     transform: translateY(-10px) scale(1.05); /* Увеличение и подъем при наведении */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Добавление тени для глубины */
-    border-color: rgba(255, 0, 255, 0.8); /* Изменение цвета рамки при наведении */
+    border-color: rgba(255, 159, 70, 0.8); /* Изменение цвета рамки при наведении */
 }
 
 .product-image {
@@ -494,7 +494,7 @@ h2 {
 
 /* Футер */
 .footer {
-    background-color: rgba(18, 18, 18, 1);
+    background: linear-gradient(135deg, rgb(163, 163, 163).192), rgba(43, 43, 43, 0.192);
     padding: 40px 20px; /* Увеличено пространство для лучшего восприятия */
     text-align: center;
     position: relative; /* Для позиционирования снежинок */
@@ -510,7 +510,7 @@ h2 {
     align-items: center; /* Центрирование по вертикали */
     height: 100vh; /* Высота контейнера на весь экран */
     padding: 20px; /* Отступы */
-    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.8)); /* Градиентный фон */
+    background: linear-gradient(135deg, rgb(163, 163, 163).192), rgba(43, 43, 43, 0.192);
 }
 
 /* Контейнер с содержимым */
@@ -717,8 +717,8 @@ p:hover {
 
 /* Заголовки */
 h1, h3 {
-    color: #00ffcc; /* Цвет заголовков */
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Эффект свечения */
+    color: #ff9c40; /* Цвет заголовков */
+    text-shadow: 0 0 10px rgba(82, 82, 82, 0.7); /* Эффект свечения */
     margin-bottom: 15px;
     position: relative;
 }
