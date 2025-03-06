@@ -1,7 +1,7 @@
 /* Основные стили */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: url('fon2.jpg');
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -66,7 +66,7 @@ canvas {
 }
 
 .nav-item a {
-    color: #00ffcc;
+    color: #f7faf9;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
@@ -170,7 +170,7 @@ canvas {
 
 .product-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 40px rgba(0, 255, 204, 0.8);
+    box-shadow: 0 8px 40px linear-gradient(135deg, rgb(150, 150, 150).192), rgba(102, 102, 102, 0.192);
 }
 
 /* Стили для услуг с индивидуальными размерами */
@@ -426,7 +426,7 @@ canvas {
 
 /* Стили для футера с динамическим эффектом */
 .footer {
-    background: linear-gradient(135deg, rgb(13, 10, 41), rgb(48, 44, 99), rgb(35, 35, 62));
+    background: linear-gradient(135deg, rgb(163, 163, 163).192), rgba(43, 43, 43, 0.192);
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -476,7 +476,7 @@ canvas {
 .dynamic-button:hover {
     background-color: var(--hover-bg-color); /* Цвет фона при наведении */
     transform: translateY(-3px); /* Легкий подъем при наведении */
-    box-shadow: 0 8px 30px rgba(0, 255, 204, 0.8); /* Увеличение тени при наведении */
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.8); /* Увеличение тени при наведении */
 }
 
 /* Стили для изображений внутри кнопок */
@@ -550,7 +550,7 @@ canvas {
 
 /* Дополнительные стили для кнопок */
 .button {
-    background-color: #00ffcc;
+    background-color: #fafafa;
     color: #000;
     padding: 10px 20px;
     border: none;
@@ -587,7 +587,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    color: #00ffcc;
+    color: #ffffff;
     font-size: 3em; /* Увеличенный размер заголовка */
 }
 
@@ -869,55 +869,6 @@ transform: scale(1.05); /* Увеличение кнопки при наведе
     }
 }
 
-    /* Стили для футера с динамическим эффектом */
-    .footer {
-        background: linear-gradient(135deg, rgb(13, 10, 41), rgb(48, 44, 99), rgb(35, 35, 62));
-        color: #ffffff;
-        padding: 20px;
-        text-align: center;
-        width: 100vw; /* Используем ширину окна просмотра */
-        position: fixed; /* Или absolute, если нужно */
-        bottom: 110; /* Привязываем футер к нижней части окна */
-        left: 0; /* Устанавливаем его влево */
-        margin: 0; /* Убираем отступы */
-        animation: fadeIn 1s ease-in-out;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для футера */
-        border-top: 2px solid rgba(255, 174, 0, 0.5); /* Верхняя граница */
-    }
-    
-
-    .footer-links {
-        margin: 10px 0;
-    }
-
-    .footer-links a {
-        color: #00ffcc;
-        margin: 0 15px;
-        text-decoration: none;
-        transition: color 0.3s, transform 0.3s;
-    }
-
-    .footer-links a:hover {
-        text-decoration: underline;
-        color: #ffcc00;
-        transform: scale(1.1);
-    }
-
-    .footer p {
-        margin: 10px 0 0;
-        font-size: 0.9em;
-    }
-
-    /* Анимация текста в футере */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
     /* Стили для кнопки "Наверх" */
     .scroll-to-top {
         position: fixed;
@@ -1094,8 +1045,8 @@ transform: scale(1.05); /* Увеличение кнопки при наведе
 
 /* Заголовки */
 h1, h3 {
-    color: #00ffcc;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(158, 158, 158, 0.7);
     margin-bottom: 15px;
     position: relative;
 }
@@ -1105,8 +1056,8 @@ h1::after, h3::after {
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
-    background: #00ffcc;
+    height: 1px;
+    background: #919191;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -1126,7 +1077,7 @@ p {
 }
 
 p:hover {
-    color: #00ffcc;
+    color: #ffffff;
 }
 
 /* Анимация появления */
