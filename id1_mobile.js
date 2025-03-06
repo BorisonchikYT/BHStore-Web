@@ -4,7 +4,7 @@ style.type = 'text/css';
 
 // Добавляем CSS стили в элемент <style>
 style.innerHTML = `body {
-    background: url('img/fon2.jpg'); /* Добавляем url для изображения фона */
+    background: url('fon2.jpg'); /* Добавляем url для изображения фона */
     color: #ffffff; /* Цвет текста по умолчанию */
     font-family: 'Russo One', sans-serif; /* Применяем шрифт Russo One для основного текста */
     margin: 0;
